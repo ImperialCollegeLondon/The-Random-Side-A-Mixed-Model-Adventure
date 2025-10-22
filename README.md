@@ -17,16 +17,16 @@ throughout the development and plan accordingly.
 
 
 <!-- Your exemplar title. Make it sound catchy! -->
-# This is my exemplar title
+# The Random Side of R: A Mixed Model Adventure 
 
 <!-- A brief description of your exemplar, which may include an image -->
-This is a brief abstract of my exemplar, which includes a representative image.
-![Scikit Camera Image](img/readme-img.png)
+Mixed models, also known multilevel/hierarchical models, are a type of statistical model that include both fixed effects and/or random effects. Traditional linear models assume all observations are independent (but that's rarely true). For example, patients nested in hospitals, students within classrooms, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and
+invalid conclusions. In this project I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages
 
 <!-- Author information -->
-This exemplar was developed at Imperial College London by (YOUR NAME) in
-collaboration with (RSE MENTOR) from Research Software Engineering and
-(RCDS MENTOR) from Research Computing & Data Science at the Early Career
+This exemplar was developed at Imperial College London by (Valentina Quintero Santofimio) in
+collaboration with (Saranjeet Kaur and Miruna Serian) from Research Software Engineering and
+(John Pinney) from Research Computing & Data Science at the Early Career
 Researcher Institute.
 
 
@@ -37,16 +37,19 @@ skills will be gained by studying your ReCoDE exemplar. -->
 
 After completing this exemplar, students will:
 
-- Learning Outcome 1
-- Learning Outcome 2
-- Learning Outcome 3
-
+- Understand the foundation of linear mixed-effects models (LMMs)
+- Know when and why to use mixed models over traditional regression
+- Implement mixed models in R 
+- Interpret fixed and random effects, variance components, and model fit statistics
+- Visualize and validate model 
+- Extend to generalized mixed models (GLMMs) and crossed/nested designs
 
 <!-- Audience. Think broadly as to who will benefit. -->
 ## Target Audience 🎯
+The primary focus is to work with large (usually epidemiological) data. Mixed models are useful when working with repeated measures,
+nested data, or simply want to account for variability across groups. 
 
-Who will benefit from studying this exemplar.
-
+These models however, can be applicable to other disciplines that involves multiple collection of data at different time points. This ensures accurate interpretation and conclusions of your data.
 
 <!-- Requirements.
 What skills and knowledge will students need before starting?
@@ -57,44 +60,17 @@ e.g. If your project uses a niche library, you could either set it as a
 requirement or make it a learning outcome above. If a learning outcome,
 you must include a relevant section that helps with learning this library.
 -->
-## Prerequisites ✅
-
-### Academic 📚
-
-- Required skills/knowledge (e.g. programming languages, libraries, theory, courses)
-
-### System 💻
-
-- System requirements (e.g. Python 3.11+, Anaconda, 50 GB disk space, etc.)
-- Hardware or HPC requirements (if any)
-
 
 <!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 ## Getting Started 🚀
 
-e.g. Step-by-step guide:
-
-1. Start by (instruction).
-2. Visit the sections of this notebook in some particular order.
-3. Attempt exercises `1a`, `1b`, etc.
-4. Progress to advanced materials in the Github repository linked here.
-5. Compare with solutions available in the `solutions` folder.
+1. Start by reading the ReCoDE main page.
+2. Complete the `Introduction` section (video lecture, reading materials)
+3. Continue with `Data Curation`(get your data ready for a mixed model analysis)
+4. Conduct a `Mixed model analysis I`
+5. Take your analysis to the next level by attempting the extension task `Mixed model analysis II` (Advanced exercise)
 
 
-<!-- Background. Tell learners about why this exemplar is useful. -->
-## Disciplinary Background 🔬
-     
-Briefly describe how this project fits in your discipline, why you chose
-to work on it, and what other disciplines may find it useful.
-
-
-<!-- Software. What languages, libraries, software you use. -->
-## Software Tools 🛠️
-
-Programming language(s), libraries, and scientific software used.
-
-
-<!-- Repository structure. Explain how your code is structured. -->
 ## Project Structure 🗂️
 
 Overview of code organisation and structure.
@@ -155,62 +131,38 @@ Completed tasks are marked with an x between the square brackets.
 
 ### Core 🧩
 
-- [x] Data ingestion pipeline
-    * [x] Tutorial with small data exercise
-- [x] Core analysis algorithms
-    * [x] Documentation with worked example
-- [ ] Basic visualisation tools
-    * [ ] Mini-project: "Create your first plot"
-- [ ] Results export functionality
-    * [ ] Usage tutorial with export task
-    * [ ] Short video walkthrough *(planned)*
-- [ ] Automated testing suite
-    * [ ] Debugging challenge
-- [ ] Documentation for core methods
+- [ ] Understanding mixed models 
+    * [ ] Correct type of data 
+- [ ] Organise your data 
+    * [ ] With worked example
+- [ ] Basic visualisation 
+    * [ ] Mini-project: "Visualise your groups"
+- [ ] Data Analysis I
+    * [ ] What R packages should I use?
+    * [ ] Run different mixed models 
+- [ ] Results
+    * [ ] Understanding my results 
+    * [ ] Visualisating results
+    * [ ] Is my model good enough?
 
 ### Extensions 🔌
 
-- [ ] Advanced statistical models
-    * [ ] Example notebook with exercises
-- [ ] Interactive dashboard
-    * [ ] Exercise: Build a simple component
-- [ ] Multi-format data import/export
-    * [ ] Guide with hands-on tasks
-- [ ] Collaboration tools integration
-    * [ ] Exercise: Set up collaborative workflow
-    * [ ] Include diagram of workflow *(optional)*
-- [ ] Extended visualisation options
-    * [ ] Creative task: Design a custom plot
+- [ ] Advanced mixed-models
+    * [ ] Using complex data 
 
 <!-- Data availability (remove this section if no data used) -->
 ## Data 📊
-
-List datasets used with:
-
-- Licensing info
-- Where they are included (in the repo or external links)
-
-
-<!-- Best practice notes. -->
-## Best Practice Notes 📝
-
-- Code testing and/or test examples
-- Use of continuous integration (if any)
-- Any other software development best practices
+For this exercise, a synthetic data set will be generated resembling large epidemiological data with different sites (clusters).
 
 <!-- Estimate the time it will take for a learner to progress through the exemplar. -->
 ## Estimated Time ⏳
 
 | Task       | Time    |
 | ---------- | ------- |
-| Reading    | 3 hours |
-| Practising | 3 hours |
-
-
-<!-- Any references, or other resources. -->
-## Additional Resources 🔗
-
-- Relevant sources, websites, images, AOB.
+| Pre-session material| 3 hours |
+| Data curation| 2 hours |
+| Analysis | 2-3 hours |
+| Interpretation of results| 2 hours |
 
 <!-- LICENCE.
 Imperial prefers BSD-3. Please update the LICENSE.md file with the current year.
