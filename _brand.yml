@@ -1,0 +1,9 @@
+color:
+  palette:
+    imperial-blue: "#0000cd"
+    black: "#161a1d"
+    white: "#ffffff"
+  primary: imperial-blue
+
+logo: 
+  medium: img/iclogo.png
