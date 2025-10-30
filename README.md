@@ -21,11 +21,11 @@ throughout the development and plan accordingly.
 
 <!-- A brief description of your exemplar, which may include an image -->
 Mixed models, also known multilevel/hierarchical models, are a type of statistical model that include both fixed effects and/or random effects. Traditional linear models assume all observations are independent (but that's rarely true). For example, patients nested in hospitals, students within classrooms, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and
-invalid conclusions. In this project I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages
+invalid conclusions. In this project, I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages
 
 <!-- Author information -->
 This exemplar was developed at Imperial College London by (Valentina Quintero Santofimio) in
-collaboration with (Saranjeet Kaur and Miruna Serian) from Research Software Engineering and
+collaboration with (Saranjeet Kaur Bhogal and Miruna Serian) from Research Software Engineering and
 (John Pinney) from Research Computing & Data Science at the Early Career
 Researcher Institute.
 
@@ -64,11 +64,11 @@ you must include a relevant section that helps with learning this library.
 <!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 ## Getting Started 🚀
 
-1. Start by reading the ReCoDE main page.
-2. Complete the `Introduction` section (video lecture, reading materials)
-3. Continue with `Data Curation`(get your data ready for a mixed model analysis)
-4. Conduct a `Mixed model analysis I`
-5. Take your analysis to the next level by attempting the extension task `Mixed model analysis II` (Advanced exercise)
+- Start by reading the ReCoDE main page.
+- Complete the `Introduction` section (video lecture, reading materials)
+- Continue with `Data Curation`(get your data ready for a mixed model analysis)
+- Conduct a `Mixed model analysis I`
+- Take your analysis to the next level by attempting the extension task `Mixed model analysis II` (Advanced exercise)
 
 
 ## Project Structure 🗂️
