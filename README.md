@@ -68,9 +68,9 @@ R (the statistical programming language): 4.5.1.
 RStudio (the IDE/GUI for R): 2025.09.2
 
 We will also use the following R packages:
-_lme4_ for fitting the model
-_lmerTest_ for advanced models 
-_performance_, _see_, and _parameters_ for diagnostics, fit checks, and parameter extraction
+- _lme4_ for fitting the model
+- _lmerTest_ for advanced models 
+- _performance_, _see_, and _parameters_ for diagnostics, fit checks, and parameter extraction
 
 <!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 ## Getting Started 🚀
