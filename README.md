@@ -20,7 +20,7 @@ throughout the development and plan accordingly.
 # The Random Side of R: A Mixed Model Adventure 
 
 <!-- A brief description of your exemplar, which may include an image -->
-Mixed models, also known multilevel/hierarchical models, are a type of statistical model that include both fixed effects and/or random effects. Traditional linear models assume all observations are independent (but that's rarely true). For example, patients nested in hospitals, students within classrooms, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and
+Mixed models, also known multilevel/hierarchical models, are a type of statistical model that include fixed effects and/or random effects. Traditional linear models assume all observations are independent, but that's rarely true. For example, patients from the same hospital, students from the same classroom, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and
 invalid conclusions. In this project, I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages
 
 <!-- Author information -->
@@ -38,7 +38,7 @@ skills will be gained by studying your ReCoDE exemplar. -->
 After completing this exemplar, students will:
 
 - Understand the foundation of linear mixed-effects models (LMMs)
-- Know when and why to use mixed models over traditional regression
+- Know when and why to use mixed models over simple linear regression
 - Implement mixed models in R 
 - Interpret fixed and random effects, variance components, and model fit statistics
 - Visualize and validate model 
@@ -47,7 +47,7 @@ After completing this exemplar, students will:
 <!-- Audience. Think broadly as to who will benefit. -->
 ## Target Audience 🎯
 The primary focus is to work with large (usually epidemiological) data. Mixed models are useful when working with repeated measures,
-nested data, or simply want to account for variability across groups. 
+nested data, or simply when we want to account for variability across groups. 
 
 These models however, can be applicable to other disciplines that involves multiple collection of data at different time points. This ensures accurate interpretation and conclusions of your data.
 
