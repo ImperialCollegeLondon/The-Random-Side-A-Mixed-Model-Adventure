@@ -15,7 +15,6 @@ resource at the same time. It is important to keep this in mind
 throughout the development and plan accordingly.
 -->
 
-
 <!-- Your exemplar title. Make it sound catchy! -->
 # The Random Side of R: A Mixed Model Adventure 
 
@@ -52,7 +51,8 @@ nested data, or simply when we want to account for variability across groups.
 
 These models however, can be applicable to any large dataset (any discipline), that has sufficient grouping or hierarchical structure, ensuring accurate interpretation and conclusions.
 
-## Requirements.
+## Requirements
+## Academic 📚
 It would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:
 
 Research Computing & Data Science Skills Courses
@@ -60,6 +60,17 @@ Research Computing & Data Science Skills Courses
 -   [Data Exploration and Visualisation](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-exploration-visualisation/)
 -   [Introduction to R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/r-programming/)
 -   [Data Processing with R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-processing-with-r/)
+
+## Software Tools 🛠️
+In this project we will be using R and RStudio:
+
+R (the statistical programming language): 4.5.1. 
+RStudio (the IDE/GUI for R): 2025.09.2
+
+We will also use the following R packages:
+_lme4_ for fitting the model
+_lmerTest_ for advanced models 
+_performance_, _see_, and _parameters_ for diagnostics, fit checks, and parameter extraction
 
 <!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 ## Getting Started 🚀
