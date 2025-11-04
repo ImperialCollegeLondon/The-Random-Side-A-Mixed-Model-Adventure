@@ -45,21 +45,21 @@ After completing this exemplar, students will:
 - Extend to generalized mixed models (GLMMs) and crossed/nested designs
 
 <!-- Audience. Think broadly as to who will benefit. -->
+
 ## Target Audience 🎯
 The primary focus is to work with large (usually epidemiological) data. Mixed models are useful when working with repeated measures,
 nested data, or simply when we want to account for variability across groups. 
 
-These models however, can be applicable to other disciplines that involves multiple collection of data at different time points. This ensures accurate interpretation and conclusions of your data.
+These models however, can be applicable to any large dataset (any discipline), that has sufficient grouping or hierarchical structure, ensuring accurate interpretation and conclusions.
 
-<!-- Requirements.
-What skills and knowledge will students need before starting?
-e.g. ECRI courses, knowledge of a programming language or library...
+## Requirements.
+It would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:
 
-Is it a prerequisite skill or learning outcome?
-e.g. If your project uses a niche library, you could either set it as a
-requirement or make it a learning outcome above. If a learning outcome,
-you must include a relevant section that helps with learning this library.
--->
+Research Computing & Data Science Skills Courses
+
+-   [Data Exploration and Visualisation](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-exploration-visualisation/)
+-   [Introduction to R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/r-programming/)
+-   [Data Processing with R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-processing-with-r/)
 
 <!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 ## Getting Started 🚀
@@ -70,63 +70,6 @@ you must include a relevant section that helps with learning this library.
 - Conduct a `Mixed model analysis I`
 - Take your analysis to the next level by attempting the extension task `Mixed model analysis II` (Advanced exercise)
 
-
-## Project Structure 🗂️
-
-Overview of code organisation and structure.
-
-```
-.
-├── src
-│ ├── file1.qmd
-│ ├── file2.qmd
-│ ├── ...
-│ └── data
-├── docs
-└── test
-└── _quarto.yml
-```
-
-Code is organised into logical components:
-
-- `src` for core code, potentially divided into further modules
-- `data` within `src` for datasets
-- `docs` for documentation
-- `test` for testing scripts
-- `_quarto.yml` for Quarto configuration
-
-
-<!-- Roadmap.
-Identify the project core (a minimal working example). This
-is what you should develop first, ideally by week 6. Defining
-a core helps ensure that, despite a tight timeline, we will end
-up with a complete project.
-
-Identify project extensions. These are additional features that
-you will implement after the core of the project is finished; you
-could also propose extensions as open-ended exercises for the ReCoDE
-audience.
-
-Outline the process of creating the exemplar as a project roadmap
-with individual steps. This will help you with defining the scope of 
-the project. When you think about this, imagine that you are explaining
-it to a new PhD student. Assume that this student is from a related (but
-not necessarily same) discipline. They can code but have never undertaken
-a larger project. The steps should follow logical development of the
-project and good practice. Each will be relatively independent and contain
-its own learning annotation and links to other learning materials if
-appropriate. The learning annotation is going to form a significant portion
-of your efforts.
-
-Learning annotations will evolve as we go along but planning now will be useful
-in defining your exemplar steps. Remember that active learning is generally more
-valuable than just reading information, so small exercises that build on previous
-steps can really help your students to understand the software development process.
-You can include videos, text, charts, images, flowcharts, storyboards, or anything
-creative that you may think of.
-
-Completed tasks are marked with an x between the square brackets.
--->
 ## Roadmap 🗺️
 
 ### Core 🧩
