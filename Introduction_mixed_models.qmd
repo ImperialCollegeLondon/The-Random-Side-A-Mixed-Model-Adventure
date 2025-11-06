@@ -1,4 +1,3 @@
-
 ---
 title: "Mixed Models Analysis Using Large Datasets"
 author: "Valentina Quintero Santofimio"
@@ -14,6 +13,7 @@ editor: visual
 ---
 
 # 1. Introduction
+
 ## Welcome to *The Random Side of R: A Mixed Model Adventure* (ReCoDe Project)
 
 This project is designed to guide you through the process of performing a **mixed-effects model** using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both **fixed effects** (systematic, population-level factors) and **random effects** (group- or subject-level variability).
@@ -24,16 +24,15 @@ The tutorial is structured into a series of sections introducing you to the basi
 
 ### Project Structure
 
-| Stage | Focus | R packages|
-|--------|-------|----------------|
-| **1. Data Curation** | Importing, cleaning, and structuring grouped data | `tidyverse`|
+| Stage | Focus | R packages |
+|------------------|------------------|------------------------------------|
+| **1. Data Curation** | Importing, cleaning, and structuring grouped data | `tidyverse` |
 | **2. Exploratory Analysis** | Exploring distributions and grouping effects | `ggplot2`, `dplyr` |
 | **3. Model Fitting** | Building linear mixed-effects models | `lme4`, `lmerTest` |
-| **4. Diagnostics** | Checking assumptions and model stability | `performance`|
+| **4. Diagnostics** | Checking assumptions and model stability | `performance` |
 | **5. Visualisation** | Plotting fixed/random effects | `sjPlot`, `ggeffects` |
-| **6. Interpretation** |  Presenting your findings|`ggplot` , `forest plots` |
+| **6. Interpretation** | Presenting your findings | `ggplot` , `forest plots` |
 | **7.Extensions** | Generalised or hierarchical structures | `glmmTMB`, `brms` |
-
 
 ## Pre-requisites
 
@@ -49,23 +48,23 @@ Research Computing & Data Science Skills Courses
 
 At the end of this project you should be able to:
 
-- Understand the foundation of linear mixed-effects models (LMMs)
-- Know when and why to use mixed models over simple linear regression
-- Implement mixed models in R
-- Interpret fixed and random effects, variance components, and model fit statistics
-- Visualize and validate model
-- Extend to generalized mixed models (GLMMs) and crossed/nested designs
+-   Understand the foundation of linear mixed-effects models (LMMs)
+-   Know when and why to use mixed models over simple linear regression
+-   Implement mixed models in R
+-   Interpret fixed and random effects, variance components, and model fit statistics
+-   Visualize and validate model
+-   Extend to generalized mixed models (GLMMs) and crossed/nested designs
 
 # Introductory and teaching materials
 
-The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective. 
+The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective.
 
-## Introductory lecture on mixed models 
+## Introductory lecture on mixed models
 
 {{< video https://www.youtube.com/watch?v=-4K-kKXNths >}}
 
-#### Other resources 
-
-[Mixed Models in psychological science](https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061)
-
-
+#### Other resources
+[Mixed models in epidemiology](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891266/)
+[Mixed models in psychology](https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061)
+[Mixed models in ecology](https://pmc.ncbi.nlm.nih.gov/articles/PMC5970551/)
+[Mixed models in finance](https://pmc.ncbi.nlm.nih.gov/articles/PMC8230924/)
