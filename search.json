@@ -16,98 +16,84 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "",
-    "text": "This is a brief abstract of my exemplar, which includes a representative image.\nThis exemplar was developed at Imperial College London by (YOUR NAME) in collaboration with (RSE MENTOR) from Research Software Engineering and (RCDS MENTOR) from Research Computing & Data Science at the Early Career Researcher Institute."
+    "text": "This exemplar was developed at Imperial College London by Valentina Quintero Santofimio in collaboration with Saranjeet Kaur Bhogal and Miruna Serian from Research Software Engineering and John Pinney from Research Computing & Data Science at the Early Career Researcher Institute."
+  },
+  {
+    "objectID": "index.html#brief-description",
+    "href": "index.html#brief-description",
+    "title": "The Random Side of R: A Mixed Model Adventure",
+    "section": "Brief description",
+    "text": "Brief description\nMixed models, also known multilevel/hierarchical models, are a type of statistical model that include fixed effects and/or random effects. Traditional linear models assume all observations are independent, but that’s rarely true. For example, patients from the same hospital, students from the same classroom, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and invalid conclusions. In this project, I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages"
   },
   {
     "objectID": "index.html#learning-outcomes",
     "href": "index.html#learning-outcomes",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Learning Outcomes 🎓",
-    "text": "Learning Outcomes 🎓\nAfter completing this exemplar, students will:\n\nLearning Outcome 1\nLearning Outcome 2\nLearning Outcome 3"
+    "text": "Learning Outcomes 🎓\nAfter completing this exemplar, students will:\n\nUnderstand the foundation of linear mixed-effects models (LMMs)\nKnow when and why to use mixed models over simple linear regression\nImplement mixed models in R\nInterpret fixed and random effects, variance components, and model fit statistics\nVisualize and validate model\nExtend to generalized mixed models (GLMMs) and crossed/nested designs"
   },
   {
     "objectID": "index.html#target-audience",
     "href": "index.html#target-audience",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Target Audience 🎯",
-    "text": "Target Audience 🎯\nWho will benefit from studying this exemplar."
+    "text": "Target Audience 🎯\nThe primary focus is to work with large (usually epidemiological) data. Mixed models are useful when working with repeated measures, nested data, or simply when we want to account for variability across groups.\nThese models however, can be applicable to any large dataset (any discipline), that has sufficient grouping or hierarchical structure, ensuring accurate interpretation and conclusions."
   },
   {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "This is my exemplar title",
-    "section": "Prerequisites ✅",
-    "text": "Prerequisites ✅\n\nAcademic 📚\n\nRequired skills/knowledge (e.g. programming languages, libraries, theory, courses)\n\n\n\nSystem 💻\n\nSystem requirements (e.g. Python 3.11+, Anaconda, 50 GB disk space, etc.)\nHardware or HPC requirements (if any)"
+    "objectID": "index.html#requirements",
+    "href": "index.html#requirements",
+    "title": "The Random Side of R: A Mixed Model Adventure",
+    "section": "Requirements",
+    "text": "Requirements"
   },
   {
-    "objectID": "index.html#getting-started",
-    "href": "index.html#getting-started",
-    "title": "This is my exemplar title",
-    "section": "Getting Started 🚀",
-    "text": "Getting Started 🚀\ne.g. Step-by-step guide:\n\nStart by (instruction).\nVisit the sections of this notebook in some particular order.\nAttempt exercises 1a, 1b, etc.\nProgress to advanced materials in the Github repository linked here.\nCompare with solutions available in the solutions folder."
-  },
-  {
-    "objectID": "index.html#disciplinary-background",
-    "href": "index.html#disciplinary-background",
-    "title": "This is my exemplar title",
-    "section": "Disciplinary Background 🔬",
-    "text": "Disciplinary Background 🔬\nBriefly describe how this project fits in your discipline, why you chose to work on it, and what other disciplines may find it useful."
+    "objectID": "index.html#academic",
+    "href": "index.html#academic",
+    "title": "The Random Side of R: A Mixed Model Adventure",
+    "section": "Academic 📚",
+    "text": "Academic 📚\nIt would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:\nResearch Computing & Data Science Skills Courses\n\nData Exploration and Visualisation\nIntroduction to R\nData Processing with R"
   },
   {
     "objectID": "index.html#software-tools",
     "href": "index.html#software-tools",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Software Tools 🛠️",
-    "text": "Software Tools 🛠️\nProgramming language(s), libraries, and scientific software used."
+    "text": "Software Tools 🛠️\nIn this project we will be using R and RStudio:\nR (the statistical programming language): 4.5.1. RStudio (the IDE/GUI for R): 2025.09.2\nWe will also use the following R packages: - lme4 for fitting the model - lmerTest for advanced models - performance, see, and parameters for diagnostics, fit checks, and parameter extraction"
   },
   {
-    "objectID": "index.html#project-structure",
-    "href": "index.html#project-structure",
-    "title": "This is my exemplar title",
-    "section": "Project Structure 🗂️",
-    "text": "Project Structure 🗂️\nOverview of code organisation and structure.\n.\n├── src\n│ ├── file1.qmd\n│ ├── file2.qmd\n│ ├── ...\n│ └── data\n├── docs\n└── test\n└── _quarto.yml\nCode is organised into logical components:\n\nsrc for core code, potentially divided into further modules\ndata within src for datasets\ndocs for documentation\ntest for testing scripts\n_quarto.yml for Quarto configuration"
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "The Random Side of R: A Mixed Model Adventure",
+    "section": "Getting Started 🚀",
+    "text": "Getting Started 🚀\n\nStart by reading the ReCoDE main page.\nComplete the Introduction section (video lecture, reading materials)\nContinue with Data Curation(get your data ready for a mixed model analysis)\nConduct a Mixed model analysis I\nTake your analysis to the next level by attempting the extension task Mixed model analysis II (Advanced exercise)"
   },
   {
     "objectID": "index.html#roadmap",
     "href": "index.html#roadmap",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Roadmap 🗺️",
-    "text": "Roadmap 🗺️\n\nCore 🧩\n\nData ingestion pipeline\n\nTutorial with small data exercise\n\nCore analysis algorithms\n\nDocumentation with worked example\n\nBasic visualisation tools\n\nMini-project: “Create your first plot”\n\nResults export functionality\n\nUsage tutorial with export task\nShort video walkthrough (planned)\n\nAutomated testing suite\n\nDebugging challenge\n\nDocumentation for core methods\n\n\n\nExtensions 🔌\n\nAdvanced statistical models\n\nExample notebook with exercises\n\nInteractive dashboard\n\nExercise: Build a simple component\n\nMulti-format data import/export\n\nGuide with hands-on tasks\n\nCollaboration tools integration\n\nExercise: Set up collaborative workflow\nInclude diagram of workflow (optional)\n\nExtended visualisation options\n\nCreative task: Design a custom plot"
+    "text": "Roadmap 🗺️\n\nCore 🧩\n\nUnderstanding mixed models\n\nCorrect type of data\n\nOrganise your data\n\nWith worked example\n\nBasic visualisation\n\nMini-project: “Visualise your groups”\n\nData Analysis\n\nWhat R packages should I use?\nRun different mixed models\n\nResults\n\nUnderstanding my results\nVisualisating results\nIs my model good enough?\n\n\n\n\nExtensions 🔌\n\nAdvanced mixed-models\n\nUsing complex data"
   },
   {
     "objectID": "index.html#data",
     "href": "index.html#data",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Data 📊",
-    "text": "Data 📊\nList datasets used with:\n\nLicensing info\nWhere they are included (in the repo or external links)"
-  },
-  {
-    "objectID": "index.html#best-practice-notes",
-    "href": "index.html#best-practice-notes",
-    "title": "This is my exemplar title",
-    "section": "Best Practice Notes 📝",
-    "text": "Best Practice Notes 📝\n\nCode testing and/or test examples\nUse of continuous integration (if any)\nAny other software development best practices"
+    "text": "Data 📊\nFor this exercise, a synthetic data set will be generated resembling large epidemiological data with different sites (clusters)."
   },
   {
     "objectID": "index.html#estimated-time",
     "href": "index.html#estimated-time",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Estimated Time ⏳",
-    "text": "Estimated Time ⏳\n\n\n\nTask\nTime\n\n\n\n\nReading\n3 hours\n\n\nPractising\n3 hours"
-  },
-  {
-    "objectID": "index.html#additional-resources",
-    "href": "index.html#additional-resources",
-    "title": "This is my exemplar title",
-    "section": "Additional Resources 🔗",
-    "text": "Additional Resources 🔗\n\nRelevant sources, websites, images, AOB."
+    "text": "Estimated Time ⏳\n\n\n\nTask\nTime\n\n\n\n\nPre-session material\n3 hours\n\n\nData curation\n2 hours\n\n\nAnalysis\n2-3 hours\n\n\nInterpretation of results\n2 hours"
   },
   {
     "objectID": "index.html#licence",
     "href": "index.html#licence",
-    "title": "This is my exemplar title",
+    "title": "The Random Side of R: A Mixed Model Adventure",
     "section": "Licence 📄",
     "text": "Licence 📄\nThis project is licensed under the BSD-3-Clause license."
   }

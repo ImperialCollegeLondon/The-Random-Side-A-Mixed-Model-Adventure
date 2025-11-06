@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>This is my exemplar title – ReCoDE Exemplar Template R</title>
+<title>The Random Side of R: A Mixed Model Adventure – ReCoDE Exemplar Template R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,26 +129,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link active" data-scroll-target="#learning-outcomes">Learning Outcomes 🎓</a></li>
+  <li><a href="#brief-description" id="toc-brief-description" class="nav-link active" data-scroll-target="#brief-description">Brief description</a></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning Outcomes 🎓</a></li>
   <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience">Target Audience 🎯</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites ✅</a>
-  <ul class="collapse">
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#academic" id="toc-academic" class="nav-link" data-scroll-target="#academic">Academic 📚</a></li>
-  <li><a href="#system" id="toc-system" class="nav-link" data-scroll-target="#system">System 💻</a></li>
-  </ul></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started 🚀</a></li>
-  <li><a href="#disciplinary-background" id="toc-disciplinary-background" class="nav-link" data-scroll-target="#disciplinary-background">Disciplinary Background 🔬</a></li>
   <li><a href="#software-tools" id="toc-software-tools" class="nav-link" data-scroll-target="#software-tools">Software Tools 🛠️</a></li>
-  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure 🗂️</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started 🚀</a></li>
   <li><a href="#roadmap" id="toc-roadmap" class="nav-link" data-scroll-target="#roadmap">Roadmap 🗺️</a>
   <ul class="collapse">
   <li><a href="#core" id="toc-core" class="nav-link" data-scroll-target="#core">Core 🧩</a></li>
   <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions 🔌</a></li>
   </ul></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data 📊</a></li>
-  <li><a href="#best-practice-notes" id="toc-best-practice-notes" class="nav-link" data-scroll-target="#best-practice-notes">Best Practice Notes 📝</a></li>
   <li><a href="#estimated-time" id="toc-estimated-time" class="nav-link" data-scroll-target="#estimated-time">Estimated Time ⏳</a></li>
-  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources 🔗</a></li>
   <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence">Licence 📄</a></li>
   </ul>
 </nav>
@@ -158,7 +152,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">This is my exemplar title</h1>
+<h1 class="title">The Random Side of R: A Mixed Model Adventure</h1>
 </div>
 
 
@@ -175,179 +169,95 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- A brief description of your exemplar, which may include an image -->
-<p>This is a brief abstract of my exemplar, which includes a representative image. <img src="img/readme-img.png" class="img-fluid" alt="Scikit Camera Image"></p>
 <!-- Author information -->
-<p>This exemplar was developed at Imperial College London by (YOUR NAME) in collaboration with (RSE MENTOR) from Research Software Engineering and (RCDS MENTOR) from Research Computing &amp; Data Science at the Early Career Researcher Institute.</p>
-<!-- Learning Outcomes. 
-Aim for 3 - 4 points that illustrate what knowledge and
-skills will be gained by studying your ReCoDE exemplar. -->
+<p>This exemplar was developed at Imperial College London by <a href="https://profiles.imperial.ac.uk/valentina.quintero-santofimio20">Valentina Quintero Santofimio</a> in collaboration with <a href="https://profiles.imperial.ac.uk/s.bhogal">Saranjeet Kaur Bhogal</a> and <a href="https://profiles.imperial.ac.uk/m.serian">Miruna Serian</a> from Research Software Engineering and <a href="https://profiles.imperial.ac.uk/j.pinney">John Pinney</a> from Research Computing &amp; Data Science at the Early Career Researcher Institute.</p>
+<section id="brief-description" class="level2">
+<h2 class="anchored" data-anchor-id="brief-description">Brief description</h2>
+<p>Mixed models, also known multilevel/hierarchical models, are a type of statistical model that include fixed effects and/or random effects. Traditional linear models assume all observations are independent, but that’s rarely true. For example, patients from the same hospital, students from the same classroom, or multiple measurements from the same individual, have a specific structure that if ignored, it can lead to biased estimates, underestimated variability, and invalid conclusions. In this project, I plan to offer a practical introduction to mixed effects models in R, focusing on their use for analysing data with grouped/hierarchical structures. I will cover when and why to use mixed models, explain the difference between fixed and random effects, and walk through examples using specific R packages</p>
+</section>
 <section id="learning-outcomes" class="level2">
 <h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes 🎓</h2>
 <p>After completing this exemplar, students will:</p>
 <ul>
-<li>Learning Outcome 1</li>
-<li>Learning Outcome 2</li>
-<li>Learning Outcome 3</li>
+<li>Understand the foundation of linear mixed-effects models (LMMs)</li>
+<li>Know when and why to use mixed models over simple linear regression</li>
+<li>Implement mixed models in R</li>
+<li>Interpret fixed and random effects, variance components, and model fit statistics</li>
+<li>Visualize and validate model</li>
+<li>Extend to generalized mixed models (GLMMs) and crossed/nested designs</li>
 </ul>
-<!-- Audience. Think broadly as to who will benefit. -->
 </section>
 <section id="target-audience" class="level2">
 <h2 class="anchored" data-anchor-id="target-audience">Target Audience 🎯</h2>
-<p>Who will benefit from studying this exemplar.</p>
-<!-- Requirements.
-What skills and knowledge will students need before starting?
-e.g. ECRI courses, knowledge of a programming language or library...
-
-Is it a prerequisite skill or learning outcome?
-e.g. If your project uses a niche library, you could either set it as a
-requirement or make it a learning outcome above. If a learning outcome,
-you must include a relevant section that helps with learning this library.
--->
+<p>The primary focus is to work with large (usually epidemiological) data. Mixed models are useful when working with repeated measures, nested data, or simply when we want to account for variability across groups.</p>
+<p>These models however, can be applicable to any large dataset (any discipline), that has sufficient grouping or hierarchical structure, ensuring accurate interpretation and conclusions.</p>
 </section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites ✅</h2>
-<section id="academic" class="level3">
-<h3 class="anchored" data-anchor-id="academic">Academic 📚</h3>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+</section>
+<section id="academic" class="level2">
+<h2 class="anchored" data-anchor-id="academic">Academic 📚</h2>
+<p>It would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:</p>
+<p>Research Computing &amp; Data Science Skills Courses</p>
 <ul>
-<li>Required skills/knowledge (e.g.&nbsp;programming languages, libraries, theory, courses)</li>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-exploration-visualisation/">Data Exploration and Visualisation</a></li>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/r-programming/">Introduction to R</a></li>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-processing-with-r/">Data Processing with R</a></li>
 </ul>
-</section>
-<section id="system" class="level3">
-<h3 class="anchored" data-anchor-id="system">System 💻</h3>
-<ul>
-<li>System requirements (e.g.&nbsp;Python 3.11+, Anaconda, 50 GB disk space, etc.)</li>
-<li>Hardware or HPC requirements (if any)</li>
-</ul>
-<!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
-</section>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting Started 🚀</h2>
-<p>e.g.&nbsp;Step-by-step guide:</p>
-<ol type="1">
-<li>Start by (instruction).</li>
-<li>Visit the sections of this notebook in some particular order.</li>
-<li>Attempt exercises <code>1a</code>, <code>1b</code>, etc.</li>
-<li>Progress to advanced materials in the Github repository linked here.</li>
-<li>Compare with solutions available in the <code>solutions</code> folder.</li>
-</ol>
-<!-- Background. Tell learners about why this exemplar is useful. -->
-</section>
-<section id="disciplinary-background" class="level2">
-<h2 class="anchored" data-anchor-id="disciplinary-background">Disciplinary Background 🔬</h2>
-<p>Briefly describe how this project fits in your discipline, why you chose to work on it, and what other disciplines may find it useful.</p>
-<!-- Software. What languages, libraries, software you use. -->
 </section>
 <section id="software-tools" class="level2">
 <h2 class="anchored" data-anchor-id="software-tools">Software Tools 🛠️</h2>
-<p>Programming language(s), libraries, and scientific software used.</p>
-<!-- Repository structure. Explain how your code is structured. -->
+<p>In this project we will be using R and RStudio:</p>
+<p>R (the statistical programming language): 4.5.1. RStudio (the IDE/GUI for R): 2025.09.2</p>
+<p>We will also use the following R packages: - <em>lme4</em> for fitting the model - <em>lmerTest</em> for advanced models - <em>performance</em>, <em>see</em>, and <em>parameters</em> for diagnostics, fit checks, and parameter extraction</p>
+<!-- Quick Start Guide. Tell learners how to engage with the exemplar. -->
 </section>
-<section id="project-structure" class="level2">
-<h2 class="anchored" data-anchor-id="project-structure">Project Structure 🗂️</h2>
-<p>Overview of code organisation and structure.</p>
-<pre><code>.
-├── src
-│ ├── file1.qmd
-│ ├── file2.qmd
-│ ├── ...
-│ └── data
-├── docs
-└── test
-└── _quarto.yml</code></pre>
-<p>Code is organised into logical components:</p>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started 🚀</h2>
 <ul>
-<li><code>src</code> for core code, potentially divided into further modules</li>
-<li><code>data</code> within <code>src</code> for datasets</li>
-<li><code>docs</code> for documentation</li>
-<li><code>test</code> for testing scripts</li>
-<li><code>_quarto.yml</code> for Quarto configuration</li>
+<li>Start by reading the ReCoDE main page.</li>
+<li>Complete the <code>Introduction</code> section (video lecture, reading materials)</li>
+<li>Continue with <code>Data Curation</code>(get your data ready for a mixed model analysis)</li>
+<li>Conduct a <code>Mixed model analysis I</code></li>
+<li>Take your analysis to the next level by attempting the extension task <code>Mixed model analysis II</code> (Advanced exercise)</li>
 </ul>
-<!-- Roadmap.
-Identify the project core (a minimal working example). This
-is what you should develop first, ideally by week 6. Defining
-a core helps ensure that, despite a tight timeline, we will end
-up with a complete project.
-
-Identify project extensions. These are additional features that
-you will implement after the core of the project is finished; you
-could also propose extensions as open-ended exercises for the ReCoDE
-audience.
-
-Outline the process of creating the exemplar as a project roadmap
-with individual steps. This will help you with defining the scope of 
-the project. When you think about this, imagine that you are explaining
-it to a new PhD student. Assume that this student is from a related (but
-not necessarily same) discipline. They can code but have never undertaken
-a larger project. The steps should follow logical development of the
-project and good practice. Each will be relatively independent and contain
-its own learning annotation and links to other learning materials if
-appropriate. The learning annotation is going to form a significant portion
-of your efforts.
-
-Learning annotations will evolve as we go along but planning now will be useful
-in defining your exemplar steps. Remember that active learning is generally more
-valuable than just reading information, so small exercises that build on previous
-steps can really help your students to understand the software development process.
-You can include videos, text, charts, images, flowcharts, storyboards, or anything
-creative that you may think of.
-
-Completed tasks are marked with an x between the square brackets.
--->
 </section>
 <section id="roadmap" class="level2">
 <h2 class="anchored" data-anchor-id="roadmap">Roadmap 🗺️</h2>
 <section id="core" class="level3">
 <h3 class="anchored" data-anchor-id="core">Core 🧩</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Data ingestion pipeline</label>
+<li><label><input type="checkbox">Understanding mixed models</label>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Tutorial with small data exercise</label></li>
+<li><label><input type="checkbox">Correct type of data</label></li>
 </ul></li>
-<li><label><input type="checkbox" checked="">Core analysis algorithms</label>
+<li><label><input type="checkbox">Organise your data</label>
 <ul class="task-list">
-<li><label><input type="checkbox" checked="">Documentation with worked example</label></li>
+<li><label><input type="checkbox">With worked example</label></li>
 </ul></li>
-<li><label><input type="checkbox">Basic visualisation tools</label>
+<li><label><input type="checkbox">Basic visualisation</label>
 <ul class="task-list">
-<li><label><input type="checkbox">Mini-project: “Create your first plot”</label></li>
+<li><label><input type="checkbox">Mini-project: “Visualise your groups”</label></li>
 </ul></li>
-<li><label><input type="checkbox">Results export functionality</label>
+<li><label><input type="checkbox">Data Analysis</label>
 <ul class="task-list">
-<li><label><input type="checkbox">Usage tutorial with export task</label></li>
-<li><label><input type="checkbox">Short video walkthrough <em>(planned)</em></label></li>
+<li><label><input type="checkbox">What R packages should I use?</label></li>
+<li><label><input type="checkbox">Run different mixed models</label></li>
 </ul></li>
-<li><label><input type="checkbox">Automated testing suite</label>
+<li><label><input type="checkbox">Results</label>
 <ul class="task-list">
-<li><label><input type="checkbox">Debugging challenge</label></li>
+<li><label><input type="checkbox">Understanding my results</label></li>
+<li><label><input type="checkbox">Visualisating results</label></li>
+<li><label><input type="checkbox">Is my model good enough?</label></li>
 </ul></li>
-<li><label><input type="checkbox">Documentation for core methods</label></li>
 </ul>
 </section>
 <section id="extensions" class="level3">
 <h3 class="anchored" data-anchor-id="extensions">Extensions 🔌</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Advanced statistical models</label>
+<li><label><input type="checkbox">Advanced mixed-models</label>
 <ul class="task-list">
-<li><label><input type="checkbox">Example notebook with exercises</label></li>
-</ul></li>
-<li><label><input type="checkbox">Interactive dashboard</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Exercise: Build a simple component</label></li>
-</ul></li>
-<li><label><input type="checkbox">Multi-format data import/export</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Guide with hands-on tasks</label></li>
-</ul></li>
-<li><label><input type="checkbox">Collaboration tools integration</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Exercise: Set up collaborative workflow</label></li>
-<li><label><input type="checkbox">Include diagram of workflow <em>(optional)</em></label></li>
-</ul></li>
-<li><label><input type="checkbox">Extended visualisation options</label>
-<ul class="task-list">
-<li><label><input type="checkbox">Creative task: Design a custom plot</label></li>
+<li><label><input type="checkbox">Using complex data</label></li>
 </ul></li>
 </ul>
 <!-- Data availability (remove this section if no data used) -->
@@ -355,20 +265,7 @@ Completed tasks are marked with an x between the square brackets.
 </section>
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data 📊</h2>
-<p>List datasets used with:</p>
-<ul>
-<li>Licensing info</li>
-<li>Where they are included (in the repo or external links)</li>
-</ul>
-<!-- Best practice notes. -->
-</section>
-<section id="best-practice-notes" class="level2">
-<h2 class="anchored" data-anchor-id="best-practice-notes">Best Practice Notes 📝</h2>
-<ul>
-<li>Code testing and/or test examples</li>
-<li>Use of continuous integration (if any)</li>
-<li>Any other software development best practices</li>
-</ul>
+<p>For this exercise, a synthetic data set will be generated resembling large epidemiological data with different sites (clusters).</p>
 <!-- Estimate the time it will take for a learner to progress through the exemplar. -->
 </section>
 <section id="estimated-time" class="level2">
@@ -382,22 +279,23 @@ Completed tasks are marked with an x between the square brackets.
 </thead>
 <tbody>
 <tr class="odd">
-<td>Reading</td>
+<td>Pre-session material</td>
 <td>3 hours</td>
 </tr>
 <tr class="even">
-<td>Practising</td>
-<td>3 hours</td>
+<td>Data curation</td>
+<td>2 hours</td>
+</tr>
+<tr class="odd">
+<td>Analysis</td>
+<td>2-3 hours</td>
+</tr>
+<tr class="even">
+<td>Interpretation of results</td>
+<td>2 hours</td>
 </tr>
 </tbody>
 </table>
-<!-- Any references, or other resources. -->
-</section>
-<section id="additional-resources" class="level2">
-<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources 🔗</h2>
-<ul>
-<li>Relevant sources, websites, images, AOB.</li>
-</ul>
 <!-- LICENCE.
 Imperial prefers BSD-3. Please update the LICENSE.md file with the current year.
 -->
