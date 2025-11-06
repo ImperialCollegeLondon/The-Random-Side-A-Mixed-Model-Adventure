@@ -1,9 +1,12 @@
-# The Random Side of R: A Mixed Model Adventure 
+---
+title: "The Random Side of R: A Mixed Model Adventure"
+---
+
 
 <!-- Author information -->
-This exemplar was developed at Imperial College London by (Valentina Quintero Santofimio) in
-collaboration with (Saranjeet Kaur Bhogal and Miruna Serian) from Research Software Engineering and
-(John Pinney) from Research Computing & Data Science at the Early Career
+This exemplar was developed at Imperial College London by [Valentina Quintero Santofimio](https://profiles.imperial.ac.uk/valentina.quintero-santofimio20) in
+collaboration with [Saranjeet Kaur Bhogal](https://profiles.imperial.ac.uk/s.bhogal) and [Miruna Serian](https://profiles.imperial.ac.uk/m.serian) from Research Software Engineering and
+[John Pinney](https://profiles.imperial.ac.uk/j.pinney) from Research Computing & Data Science at the Early Career
 Researcher Institute.
 
 ## Brief description
