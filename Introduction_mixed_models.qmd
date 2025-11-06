@@ -1,0 +1,71 @@
+
+---
+title: "Mixed Models Analysis Using Large Datasets"
+author: "Valentina Quintero Santofimio"
+format:
+  html:
+    other-links:
+      - text: What are mixed models?
+        href: https://pmc.ncbi.nlm.nih.gov/articles/PMC10171296/ 
+      - text: Introduction to Mixed Models in R
+        href: https://journals.sagepub.com/doi/10.1177/2515245920960351 
+      - file: github-corner.html
+editor: visual
+---
+
+# 1. Introduction
+## Welcome to *The Random Side of R: A Mixed Model Adventure* (ReCoDe Project)
+
+This project is designed to guide you through the process of performing a **mixed-effects model** using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both **fixed effects** (systematic, population-level factors) and **random effects** (group- or subject-level variability).
+
+These models are particularly powerful when dealing with **grouped**, **clustered**, or **repeated-measures** data, such as individuals measured multiple times, schools within regions, or experiments conducted across sites. By explicitly modelling the correlation structure within the data, mixed models yield more accurate estimates and generalisable inferences.
+
+The tutorial is structured into a series of sections introducing you to the basic concepts, analytic approaches, and applications of mixed models in R. You will learn how to structure your data, fit models, interpret both fixed and random effects, and visualise and validate results.
+
+### Project Structure
+
+| Stage | Focus | R packages|
+|--------|-------|----------------|
+| **1. Data Curation** | Importing, cleaning, and structuring grouped data | `tidyverse`|
+| **2. Exploratory Analysis** | Exploring distributions and grouping effects | `ggplot2`, `dplyr` |
+| **3. Model Fitting** | Building linear mixed-effects models | `lme4`, `lmerTest` |
+| **4. Diagnostics** | Checking assumptions and model stability | `performance`|
+| **5. Visualisation** | Plotting fixed/random effects | `sjPlot`, `ggeffects` |
+| **6. Interpretation** |  Presenting your findings|`ggplot` , `forest plots` |
+| **7.Extensions** | Generalised or hierarchical structures | `glmmTMB`, `brms` |
+
+
+## Pre-requisites
+
+In this ReCoDe project we will be using R so it would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:
+
+Research Computing & Data Science Skills Courses
+
+-   [Data Exploration and Visualisation](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-exploration-visualisation/)
+-   [Introduction to R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/r-programming/)
+-   [Data Processing with R](https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-processing-with-r/)
+
+# Learning outcomes
+
+At the end of this project you should be able to:
+
+- Understand the foundation of linear mixed-effects models (LMMs)
+- Know when and why to use mixed models over simple linear regression
+- Implement mixed models in R
+- Interpret fixed and random effects, variance components, and model fit statistics
+- Visualize and validate model
+- Extend to generalized mixed models (GLMMs) and crossed/nested designs
+
+# Introductory and teaching materials
+
+The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective. 
+
+## Introductory lecture on mixed models 
+
+{{< video https://www.youtube.com/watch?v=-4K-kKXNths >}}
+
+#### Other resources 
+
+[Mixed Models in psychological science](https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061)
+
+
