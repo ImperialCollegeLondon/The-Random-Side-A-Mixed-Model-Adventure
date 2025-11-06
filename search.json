@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "ReCoDE Exemplar Template R",
+    "section": "",
+    "text": "BSD 3-Clause License\nCopyright (c) 2022-2025, Imperial College London All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Include further details about your exemplar."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "This is my exemplar title",
+    "section": "",
+    "text": "This is a brief abstract of my exemplar, which includes a representative image.\nThis exemplar was developed at Imperial College London by (YOUR NAME) in collaboration with (RSE MENTOR) from Research Software Engineering and (RCDS MENTOR) from Research Computing & Data Science at the Early Career Researcher Institute."
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "This is my exemplar title",
+    "section": "Learning Outcomes 🎓",
+    "text": "Learning Outcomes 🎓\nAfter completing this exemplar, students will:\n\nLearning Outcome 1\nLearning Outcome 2\nLearning Outcome 3"
+  },
+  {
+    "objectID": "index.html#target-audience",
+    "href": "index.html#target-audience",
+    "title": "This is my exemplar title",
+    "section": "Target Audience 🎯",
+    "text": "Target Audience 🎯\nWho will benefit from studying this exemplar."
+  },
+  {
+    "objectID": "index.html#prerequisites",
+    "href": "index.html#prerequisites",
+    "title": "This is my exemplar title",
+    "section": "Prerequisites ✅",
+    "text": "Prerequisites ✅\n\nAcademic 📚\n\nRequired skills/knowledge (e.g. programming languages, libraries, theory, courses)\n\n\n\nSystem 💻\n\nSystem requirements (e.g. Python 3.11+, Anaconda, 50 GB disk space, etc.)\nHardware or HPC requirements (if any)"
+  },
+  {
+    "objectID": "index.html#getting-started",
+    "href": "index.html#getting-started",
+    "title": "This is my exemplar title",
+    "section": "Getting Started 🚀",
+    "text": "Getting Started 🚀\ne.g. Step-by-step guide:\n\nStart by (instruction).\nVisit the sections of this notebook in some particular order.\nAttempt exercises 1a, 1b, etc.\nProgress to advanced materials in the Github repository linked here.\nCompare with solutions available in the solutions folder."
+  },
+  {
+    "objectID": "index.html#disciplinary-background",
+    "href": "index.html#disciplinary-background",
+    "title": "This is my exemplar title",
+    "section": "Disciplinary Background 🔬",
+    "text": "Disciplinary Background 🔬\nBriefly describe how this project fits in your discipline, why you chose to work on it, and what other disciplines may find it useful."
+  },
+  {
+    "objectID": "index.html#software-tools",
+    "href": "index.html#software-tools",
+    "title": "This is my exemplar title",
+    "section": "Software Tools 🛠️",
+    "text": "Software Tools 🛠️\nProgramming language(s), libraries, and scientific software used."
+  },
+  {
+    "objectID": "index.html#project-structure",
+    "href": "index.html#project-structure",
+    "title": "This is my exemplar title",
+    "section": "Project Structure 🗂️",
+    "text": "Project Structure 🗂️\nOverview of code organisation and structure.\n.\n├── src\n│ ├── file1.qmd\n│ ├── file2.qmd\n│ ├── ...\n│ └── data\n├── docs\n└── test\n└── _quarto.yml\nCode is organised into logical components:\n\nsrc for core code, potentially divided into further modules\ndata within src for datasets\ndocs for documentation\ntest for testing scripts\n_quarto.yml for Quarto configuration"
+  },
+  {
+    "objectID": "index.html#roadmap",
+    "href": "index.html#roadmap",
+    "title": "This is my exemplar title",
+    "section": "Roadmap 🗺️",
+    "text": "Roadmap 🗺️\n\nCore 🧩\n\nData ingestion pipeline\n\nTutorial with small data exercise\n\nCore analysis algorithms\n\nDocumentation with worked example\n\nBasic visualisation tools\n\nMini-project: “Create your first plot”\n\nResults export functionality\n\nUsage tutorial with export task\nShort video walkthrough (planned)\n\nAutomated testing suite\n\nDebugging challenge\n\nDocumentation for core methods\n\n\n\nExtensions 🔌\n\nAdvanced statistical models\n\nExample notebook with exercises\n\nInteractive dashboard\n\nExercise: Build a simple component\n\nMulti-format data import/export\n\nGuide with hands-on tasks\n\nCollaboration tools integration\n\nExercise: Set up collaborative workflow\nInclude diagram of workflow (optional)\n\nExtended visualisation options\n\nCreative task: Design a custom plot"
+  },
+  {
+    "objectID": "index.html#data",
+    "href": "index.html#data",
+    "title": "This is my exemplar title",
+    "section": "Data 📊",
+    "text": "Data 📊\nList datasets used with:\n\nLicensing info\nWhere they are included (in the repo or external links)"
+  },
+  {
+    "objectID": "index.html#best-practice-notes",
+    "href": "index.html#best-practice-notes",
+    "title": "This is my exemplar title",
+    "section": "Best Practice Notes 📝",
+    "text": "Best Practice Notes 📝\n\nCode testing and/or test examples\nUse of continuous integration (if any)\nAny other software development best practices"
+  },
+  {
+    "objectID": "index.html#estimated-time",
+    "href": "index.html#estimated-time",
+    "title": "This is my exemplar title",
+    "section": "Estimated Time ⏳",
+    "text": "Estimated Time ⏳\n\n\n\nTask\nTime\n\n\n\n\nReading\n3 hours\n\n\nPractising\n3 hours"
+  },
+  {
+    "objectID": "index.html#additional-resources",
+    "href": "index.html#additional-resources",
+    "title": "This is my exemplar title",
+    "section": "Additional Resources 🔗",
+    "text": "Additional Resources 🔗\n\nRelevant sources, websites, images, AOB."
+  },
+  {
+    "objectID": "index.html#licence",
+    "href": "index.html#licence",
+    "title": "This is my exemplar title",
+    "section": "Licence 📄",
+    "text": "Licence 📄\nThis project is licensed under the BSD-3-Clause license."
+  }
+]
