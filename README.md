@@ -91,7 +91,7 @@ We will also use the following R packages:
     * [ ] With worked example
 - [ ] Basic visualisation 
     * [ ] Mini-project: "Visualise your groups"
-- [ ] Data Analysis I
+- [ ] Data Analysis
     * [ ] What R packages should I use?
     * [ ] Run different mixed models 
 - [ ] Results
