@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Valentina Quintero Santofimio">
 
-<title>About – ReCoDE Exemplar Template R</title>
+<title>Mixed Models Analysis Using Large Datasets – ReCoDE: Mixed models R tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,9 +38,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-72d15cbaaff2a8b1f75ed27836891bb3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -89,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./img/iclogo.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">ReCoDE Exemplar Template R</span>
+    <span class="navbar-title">ReCoDE: Mixed models R tutorial</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -103,8 +104,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link active" href="./intro_mixed.html" aria-current="page"> 
+<span class="menu-text">Introduction</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -124,21 +125,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a>
+  <ul class="collapse">
+  <li><a href="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" id="toc-welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" class="nav-link" data-scroll-target="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> (ReCoDe Project)</a>
+  <ul class="collapse">
+  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
+  </ul></li>
+  <li><a href="#pre-requisites" id="toc-pre-requisites" class="nav-link" data-scroll-target="#pre-requisites">Pre-requisites</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
+  <li><a href="#introductory-and-teaching-materials" id="toc-introductory-and-teaching-materials" class="nav-link" data-scroll-target="#introductory-and-teaching-materials">Introductory and teaching materials</a>
+  <ul class="collapse">
+  <li><a href="#introductory-lecture-on-mixed-models" id="toc-introductory-lecture-on-mixed-models" class="nav-link" data-scroll-target="#introductory-lecture-on-mixed-models">Introductory lecture on mixed models</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10171296/"><i class="bi bi-link-45deg"></i>What are mixed-effect models?</a></li><li><a href="https://journals.sagepub.com/doi/10.1177/2515245920960351"><i class="bi bi-link-45deg"></i>Introduction to mixed models in R</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Mixed Models Analysis Using Large Datasets</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Valentina Quintero Santofimio </p>
+          </div>
+  </div>
     
   
     
@@ -149,9 +174,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Include further details about your exemplar.</p>
+<section id="introduction" class="level1">
+<h1>1. Introduction</h1>
+<section id="welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> (ReCoDe Project)</h2>
+<p>This project is designed to guide you through the process of performing a <strong>mixed-effects model</strong> using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both <strong>fixed effects</strong> (systematic, population-level factors) and <strong>random effects</strong> (group- or subject-level variability).</p>
+<p>These models are particularly powerful when dealing with <strong>grouped</strong>, <strong>clustered</strong>, or <strong>repeated-measures</strong> data, such as individuals measured multiple times, schools within regions, or experiments conducted across sites. By explicitly modelling the correlation structure within the data, mixed models yield more accurate estimates and generalisable inferences.</p>
+<p>The tutorial is structured into a series of sections introducing you to the basic concepts, analytic approaches, and applications of mixed models in R. You will learn how to structure your data, fit models, interpret both fixed and random effects, and visualise and validate results.</p>
+<section id="project-structure" class="level3">
+<h3 class="anchored" data-anchor-id="project-structure">Project Structure</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stage</th>
+<th>Focus</th>
+<th>R packages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1. Data Curation</strong></td>
+<td>Importing, cleaning, and structuring grouped data</td>
+<td><code>tidyverse</code></td>
+</tr>
+<tr class="even">
+<td><strong>2. Exploratory Analysis</strong></td>
+<td>Exploring distributions and grouping effects</td>
+<td><code>ggplot2</code>, <code>dplyr</code></td>
+</tr>
+<tr class="odd">
+<td><strong>3. Model Fitting</strong></td>
+<td>Building linear mixed-effects models</td>
+<td><code>lme4</code>, <code>lmerTest</code></td>
+</tr>
+<tr class="even">
+<td><strong>4. Diagnostics</strong></td>
+<td>Checking assumptions and model stability</td>
+<td><code>performance</code></td>
+</tr>
+<tr class="odd">
+<td><strong>5. Visualisation</strong></td>
+<td>Plotting fixed/random effects</td>
+<td><code>sjPlot</code>, <code>ggeffects</code></td>
+</tr>
+<tr class="even">
+<td><strong>6. Interpretation</strong></td>
+<td>Presenting your findings</td>
+<td><code>ggplot</code> , <code>forest plots</code></td>
+</tr>
+<tr class="odd">
+<td><strong>7.Extensions</strong></td>
+<td>Generalised or hierarchical structures</td>
+<td><code>glmmTMB</code>, <code>brms</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="pre-requisites" class="level2">
+<h2 class="anchored" data-anchor-id="pre-requisites">Pre-requisites</h2>
+<p>In this ReCoDe project we will be using R so it would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:</p>
+<p>Research Computing &amp; Data Science Skills Courses</p>
+<ul>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-exploration-visualisation/">Data Exploration and Visualisation</a></li>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/r-programming/">Introduction to R</a></li>
+<li><a href="https://www.imperial.ac.uk/students/academic-support/graduate-school/professional-development/doctoral-students/research-computing-data-science/courses/data-processing-with-r/">Data Processing with R</a></li>
+</ul>
+</section>
+</section>
+<section id="learning-outcomes" class="level1">
+<h1>Learning outcomes</h1>
+<p>At the end of this project you should be able to:</p>
+<ul>
+<li>Understand the foundation of linear mixed-effects models (LMMs)</li>
+<li>Know when and why to use mixed models over simple linear regression</li>
+<li>Implement mixed models in R</li>
+<li>Interpret fixed and random effects, variance components, and model fit statistics</li>
+<li>Visualize and validate model</li>
+<li>Extend to generalized mixed models (GLMMs) and crossed/nested designs</li>
+</ul>
+</section>
+<section id="introductory-and-teaching-materials" class="level1">
+<h1>Introductory and teaching materials</h1>
+<p>The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective.</p>
+<section id="introductory-lecture-on-mixed-models" class="level2">
+<h2 class="anchored" data-anchor-id="introductory-lecture-on-mixed-models">Introductory lecture on mixed models</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/-4K-kKXNths" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<section id="other-resources" class="level4">
+<h4 class="anchored" data-anchor-id="other-resources">Other resources</h4>
+<ul>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9891266/">Mixed models in epidemiology</a></li>
+<li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061">Mixed models in psychology</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5970551/">Mixed models in ecology</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8230924/">Mixed models in finance</a></li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

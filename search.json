@@ -1,15 +1,36 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "intro_mixed.html",
+    "href": "intro_mixed.html",
+    "title": "Mixed Models Analysis Using Large Datasets",
     "section": "",
-    "text": "Include further details about your exemplar."
+    "text": "This project is designed to guide you through the process of performing a mixed-effects model using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both fixed effects (systematic, population-level factors) and random effects (group- or subject-level variability).\nThese models are particularly powerful when dealing with grouped, clustered, or repeated-measures data, such as individuals measured multiple times, schools within regions, or experiments conducted across sites. By explicitly modelling the correlation structure within the data, mixed models yield more accurate estimates and generalisable inferences.\nThe tutorial is structured into a series of sections introducing you to the basic concepts, analytic approaches, and applications of mixed models in R. You will learn how to structure your data, fit models, interpret both fixed and random effects, and visualise and validate results.\n\n\n\n\n\n\n\n\n\n\nStage\nFocus\nR packages\n\n\n\n\n1. Data Curation\nImporting, cleaning, and structuring grouped data\ntidyverse\n\n\n2. Exploratory Analysis\nExploring distributions and grouping effects\nggplot2, dplyr\n\n\n3. Model Fitting\nBuilding linear mixed-effects models\nlme4, lmerTest\n\n\n4. Diagnostics\nChecking assumptions and model stability\nperformance\n\n\n5. Visualisation\nPlotting fixed/random effects\nsjPlot, ggeffects\n\n\n6. Interpretation\nPresenting your findings\nggplot , forest plots\n\n\n7.Extensions\nGeneralised or hierarchical structures\nglmmTMB, brms\n\n\n\n\n\n\n\nIn this ReCoDe project we will be using R so it would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:\nResearch Computing & Data Science Skills Courses\n\nData Exploration and Visualisation\nIntroduction to R\nData Processing with R"
+  },
+  {
+    "objectID": "intro_mixed.html#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project",
+    "href": "intro_mixed.html#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project",
+    "title": "Mixed Models Analysis Using Large Datasets",
+    "section": "",
+    "text": "This project is designed to guide you through the process of performing a mixed-effects model using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both fixed effects (systematic, population-level factors) and random effects (group- or subject-level variability).\nThese models are particularly powerful when dealing with grouped, clustered, or repeated-measures data, such as individuals measured multiple times, schools within regions, or experiments conducted across sites. By explicitly modelling the correlation structure within the data, mixed models yield more accurate estimates and generalisable inferences.\nThe tutorial is structured into a series of sections introducing you to the basic concepts, analytic approaches, and applications of mixed models in R. You will learn how to structure your data, fit models, interpret both fixed and random effects, and visualise and validate results.\n\n\n\n\n\n\n\n\n\n\nStage\nFocus\nR packages\n\n\n\n\n1. Data Curation\nImporting, cleaning, and structuring grouped data\ntidyverse\n\n\n2. Exploratory Analysis\nExploring distributions and grouping effects\nggplot2, dplyr\n\n\n3. Model Fitting\nBuilding linear mixed-effects models\nlme4, lmerTest\n\n\n4. Diagnostics\nChecking assumptions and model stability\nperformance\n\n\n5. Visualisation\nPlotting fixed/random effects\nsjPlot, ggeffects\n\n\n6. Interpretation\nPresenting your findings\nggplot , forest plots\n\n\n7.Extensions\nGeneralised or hierarchical structures\nglmmTMB, brms"
+  },
+  {
+    "objectID": "intro_mixed.html#pre-requisites",
+    "href": "intro_mixed.html#pre-requisites",
+    "title": "Mixed Models Analysis Using Large Datasets",
+    "section": "",
+    "text": "In this ReCoDe project we will be using R so it would be very useful to take some courses offered by the Graduate School at Imperial College London, either as an introduction or a refresher:\nResearch Computing & Data Science Skills Courses\n\nData Exploration and Visualisation\nIntroduction to R\nData Processing with R"
+  },
+  {
+    "objectID": "intro_mixed.html#introductory-lecture-on-mixed-models",
+    "href": "intro_mixed.html#introductory-lecture-on-mixed-models",
+    "title": "Mixed Models Analysis Using Large Datasets",
+    "section": "Introductory lecture on mixed models",
+    "text": "Introductory lecture on mixed models\n\n\nOther resources\n\nMixed models in epidemiology\nMixed models in psychology\nMixed models in ecology\nMixed models in finance"
   },
   {
     "objectID": "LICENSE.html",
     "href": "LICENSE.html",
-    "title": "ReCoDE Exemplar Template R",
+    "title": "ReCoDE: Mixed models R tutorial",
     "section": "",
     "text": "BSD 3-Clause License\nCopyright (c) 2022-2025, Imperial College London All rights reserved.\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\nRedistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\nRedistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\nNeither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
   },
