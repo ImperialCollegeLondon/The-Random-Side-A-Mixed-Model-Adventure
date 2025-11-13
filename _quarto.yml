@@ -2,12 +2,13 @@ project:
   type: website
 
 website:
-  title: "ReCoDE Exemplar Template R"
+  title: "ReCoDE: Mixed models R tutorial"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: intro_mixed.qmd
+        text: Introduction
     right:
       - icon: github
         href: https://github.com/ImperialCollegeLondon/ReCoDE-exemplar-template-R   # include your GitHub repo URL
