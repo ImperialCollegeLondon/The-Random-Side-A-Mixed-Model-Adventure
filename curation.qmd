@@ -1,0 +1,83 @@
+---
+title: "Data Curation"
+format: html
+editor: visual
+---
+
+## Data Curation
+
+It is very important to have your data ready and in the right format before you run any models. This section of the tutorial will allow you practice cleaning the data set.
+
+## What data will you be using?
+
+This dataset contains simulated data for 2,000 adults from eight study sites (UK, USA, Colombia, India, South Africa, Poland, Vietnam, and Australia). It was generated to illustrate mixed-effects modeling and data cleaning workflows in respiratory epidemiology. Each participant has demographic, occupational, and lung function information designed to reflect a realistic example.
+
+### 🧹 Let’s Get Cleaning!
+
+Before jumping into mixed-modeling, we need to tackle some messy data.\
+The **dirty dataset (`mixed_dirty.txt`)** mirrors the kind of inconsistencies found in real epidemiological studies, including: typos, missing entries, odd units, and empty spaces.\
+
+| Variable | Description |
+|----|----|
+| **id** | Unique participant identifier (1–2000) |
+| **site** | Study site (country: UK, USA, Colombia, India, South Africa, Poland, Vietnam, or Australia) |
+| **age** | Participant age in years (contains missing values) |
+| **sex** | Recorded sex (e.g., “M”, “F”, “male”, “Female”, “f”, “m”, “other”) |
+| **height_cm** | Height in centimetres (may include blanks, “NA”, or blank spaces) |
+| **weight_kg** | Weight in kilograms (some missing or inconsistent entries) |
+| **BMI** | Body mass index derived from height and weight; includes rounding errors and missing values |
+| **smoking_status** | Self-reported smoking behaviour with inconsistent text (e.g., “Never”, “never”, “CURRENT”, “ex”, “quit\>1y”, “Unknown”) |
+| **pack_years** | Approximate pack-years of smoking exposure (some missing or inconsistent with smoking status) |
+| **education** | Educational attainment (free-text responses such as “primary”, “sec”, “College”, “uni”, or blanks) |
+| **job** | Reported occupation, intentionally messy (e.g., “nuse”, “mining”, “constructor”, “teacher”, “office”) |
+| **exposure_cat** | Occupational exposure category (“low” or “high_exposure”) with inconsistent naming |
+| **FEV1_mL** | Forced Expiratory Volume in 1 second, in millilitres; includes outliers, missing values, and some negative entries |
+| **FVC_mL** | Forced Vital Capacity, in millilitres; includes missing values |
+
+> *Note:* The dirty dataset includes deliberate inconsistencies and data quality issues for you to identify and correct during cleaning exercises (e.g., converting FEV1/FVC to litres, standardise categorical variables, and deriving exposure categories).
+
+Your task is to explore, clean, and prepare it for analysis.
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+### ✨ Clean Data: Ready for Analysis
+
+Once cleaned, the dataset becomes **`mixed_clean.txt`**, with harmonised categories, derived lung function metrics, and an approximate lower limit of normal (LLN) for FEV1/FVC.\
+This version can be used for teaching model fitting, random effects, and basic interpretation of respiratory epidemiology results.
+
+### Variables in the Clean Dataset
+
+| Variable | Description |
+|----|----|
+| **id** | Unique participant identifier. |
+| **site** | Study site (country); use as random intercept. |
+| **age** | Age in years (numeric, cleaned). |
+| **sex** | Standardised sex: *Male*, *Female*, or *Other*. |
+| **height_cm** | Height in centimetres (numeric, cleaned). |
+| **weight_kg** | Weight in kilograms (numeric, cleaned). |
+| **BMI** | Body mass index derived from height and weight. |
+| **smoking_status** | Recoded smoking category: *Never*, *Former*, *Current*, *Occasional* (or NA). |
+| **pack_years** | Numeric smoking exposure (may be 0 for never smokers, NA if unknown). |
+| **education** | Cleaned education level: *None*, *Primary*, *Secondary*, *Tertiary*. |
+| **job** | Original reported occupation (as entered). |
+| **job_clean** | Standardised occupation label (e.g., *miner*, *office worker*). |
+| **exposure_cat** | Original exposure category from the raw file (left for reference). |
+| **exposure_cat_clean** | Clean binary exposure category: *low* or *high_exposure* based on `job_clean`. |
+| **FEV1_mL** | FEV1 in millilitres (numeric, cleaned). |
+| **FVC_mL** | FVC in millilitres (numeric, cleaned). |
+| **FEV1_L** | FEV1 converted to litres. |
+| **FVC_L** | FVC converted to litres. |
+| **FEV1_FVC** | Ratio FEV1/FVC (unitless). |
+| **LLN_FEV1FVC_approx** | Age/sex–adjusted approximate LLN for FEV1/FVC (NHANES-inspired, for teaching). |
+| **Below_LLN** | Indicator of obstruction: 1 = FEV1/FVC below LLN, 0 = otherwise. |
