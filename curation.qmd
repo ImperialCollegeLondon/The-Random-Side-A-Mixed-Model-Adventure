@@ -38,10 +38,7 @@ Your task is to explore, clean, and prepare it for analysis.
 
 ## Install your packages and load your data
 
-For this chapter we will need the following R packages: 
-- `tidyverse`
-- `stringr`
-- `dplyr`
+For this chapter we will need the following R packages: - `tidyverse` - `stringr` - `dplyr`
 
 > *Note:* Only install these if you have not already, otherwise go straight to `library()`
 
@@ -120,6 +117,8 @@ cleaning <- cleaning %>%
       TRUE ~ "None"
     )
   )
+
+head(cleaning)
 
 ```
 
