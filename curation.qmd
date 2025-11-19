@@ -42,16 +42,20 @@ For this chapter we will need the following R packages: - `tidyverse` - `stringr
 
 > *Note:* Only install these if you have not already, otherwise go straight to `library()`
 
-```{r}
+```{r setup-packages}
+#| include: false
+#| message: false
+#| warning: false
+#| error: false
 
-pkgs <- c("tidyverse", "stringr", "readr", "dplyr")
+pkgs <- c("tidyverse", "stringr", "readr", "dplyr", "DT")
 
 install_if_missing <- pkgs[!pkgs %in% installed.packages()]
 if (length(install_if_missing) > 0) {
   install.packages(install_if_missing, dependencies = TRUE)
 }
 
-#Load all your packages
+# Load all your packages
 lapply(pkgs, library, character.only = TRUE)
 ```
 
@@ -106,7 +110,7 @@ cleaning <- cleaning %>%
       str_detect(tolower(smoking_status), "current|smokes socially") & 
         !str_detect(tolower(smoking_status), "quit") ~ "Current",
       str_detect(tolower(smoking_status), "former|ex|quit") ~ "Former",
-      tolower(smoking_status) == "occasional" ~ "Occasional",
+      tolower(smoking_status) == "occasional" ~ "Current",
       TRUE ~ NA_character_
     ),
     education_clean = case_when(
@@ -117,8 +121,6 @@ cleaning <- cleaning %>%
       TRUE ~ "None"
     )
   )
-
-head(cleaning)
 
 ```
 
@@ -165,8 +167,8 @@ cleaning <- cleaning %>%
   mutate(
     exposure_cat_clean = case_when(
       job_clean %in% c("miner","welder","factory worker","carpenter","mechanic","electrician") ~ "high_exposure",
-      job_clean %in% c("office worker","teacher","doctor","nurse","construction worker", "security","cleaner","bartender","porter","farmer","driver") ~ "low",
-      TRUE ~ "low"
+      job_clean %in% c("office worker","teacher","doctor","nurse","construction worker", "security","cleaner","bartender","porter","farmer","driver") ~ "low_exposure",
+      TRUE ~ "low_exposure"
     )
   )
 
@@ -230,7 +232,15 @@ cleaning <- cleaning %>%
 Once cleaned, the dataset becomes **`mixed_clean.txt`**, with harmonised categories, derived lung function metrics, and an approximate lower limit of normal (LLN) for FEV1/FVC.\
 This version can be used for teaching model fitting, random effects, and basic interpretation of respiratory epidemiology results.
 
-### Variables in the Clean Dataset
+```{r}
+library(DT)
+clean <- read.table("data/mixed_clean.txt", header = TRUE, sep = "\t")
+
+datatable(clean, options = list(pageLength = 10))
+```
+```
+
+### Final variables in the Clean Dataset
 
 | Variable | Description |
 |------------------------------------|------------------------------------|
