@@ -233,12 +233,13 @@ Once cleaned, the dataset becomes **`mixed_clean.txt`**, with harmonised categor
 This version can be used for teaching model fitting, random effects, and basic interpretation of respiratory epidemiology results.
 
 ```{r}
-library(DT)
+library(knitr)
 clean <- read.table("data/mixed_clean.txt", header = TRUE, sep = "\t")
 
-datatable(clean, options = list(pageLength = 10))
+kable(head(clean, 10))
 ```
-```
+
+\`\`\`
 
 ### Final variables in the Clean Dataset
 
