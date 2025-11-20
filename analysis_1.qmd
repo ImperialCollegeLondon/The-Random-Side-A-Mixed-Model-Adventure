@@ -163,8 +163,7 @@ tidy(mod_fixed) %>%
 
 ## 2. Mixed-Effects Model
 
-The `lme4` package is one of the most widely used in R to run this analysis.
-In this example we will fit a mixed effect model with random intercept by site
+The `lme4` package is one of the most widely used in R to run this analysis. In this example we will fit a mixed effect model with random intercept by site
 
 ```{r}
 
@@ -202,7 +201,7 @@ tidy(mod_mixed, effects = "fixed") %>%
 
 ```
 
-### 🧩 What does (1 | site) mean? 
+### 🧩 What does (1 \| site) mean?
 
 The term (1 \| site) in our code adds a random intercept for each study site. It allows every site to have its own baseline FEV₁/FVC, while assuming those intercepts are normally distributed around the overall mean.
 
@@ -221,7 +220,6 @@ icc
 
 > Note: A high interclass correlation (ICC) indicates more similarities within sites and a stronger justification for using mixed models
 
-#### More resources 
+#### More resources
 
-[lme4 CRAN package vignettes](<https://cran.r-project.org/web/packages/lme4/vignettes/lmer.pdf>)
-
+[lme4 CRAN package vignettes](https://cran.r-project.org/web/packages/lme4/vignettes/lmer.pdf)
