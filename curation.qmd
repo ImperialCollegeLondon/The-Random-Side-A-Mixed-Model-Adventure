@@ -6,14 +6,14 @@ editor: visual
 
 It is very important to have your data ready and in the right format before you run any models. This section of the tutorial will allow you practice cleaning the data set.
 
-## What data will you be using?
+## About the dataset
 
-This dataset contains simulated data for 2,000 adults from eight study sites (UK, USA, Colombia, India, South Africa, Poland, Vietnam, and Australia). It was generated to illustrate mixed-effects modeling and data cleaning workflows in respiratory epidemiology. Each participant has demographic, occupational, and lung function information designed to reflect a realistic example.
+The dataset contains simulated data for 2,000 adults from eight study sites (UK, USA, Colombia, India, South Africa, Poland, Vietnam, and Australia). It was generated to illustrate mixed-effects modeling and data cleaning workflows in respiratory epidemiology. Each participant has demographic, occupational, and lung function information designed to reflect a realistic example.
 
 ### 🧹 Let’s Get Cleaning!
 
-Before jumping into mixed-modeling, we need to tackle some messy data.\
-The **dirty dataset (`mixed_dirty.txt`)** mirrors the kind of inconsistencies found in real epidemiological studies, including: typos, missing entries, odd units, and empty spaces.\
+Before jumping into mixed-modelling, we need to tackle some messy data.
+The **dirty dataset (`mixed_dirty.txt`)** mirrors the kind of inconsistencies found in real epidemiological studies, including: typos, missing entries, odd units, and empty spaces.
 
 | Variable | Description |
 |------------------------------------|------------------------------------|
@@ -32,13 +32,16 @@ The **dirty dataset (`mixed_dirty.txt`)** mirrors the kind of inconsistencies fo
 | **FEV1_mL** | Forced Expiratory Volume in 1 second, in millilitres; includes outliers, missing values, and some negative entries |
 | **FVC_mL** | Forced Vital Capacity, in millilitres; includes missing values |
 
-> *Note:* The dirty dataset includes deliberate inconsistencies and data quality issues for you to identify and correct during cleaning exercises (e.g., converting FEV1/FVC to litres, standardise categorical variables, and deriving exposure categories).
+> *Note:* The `mixed_dirty.txt` dataset includes deliberate inconsistencies and data quality issues for you to identify and correct during cleaning exercises (e.g., converting FEV1/FVC to litres, standardise categorical variables, and deriving exposure categories).
 
 Your task is to explore, clean, and prepare it for analysis.
 
-## Install your packages and load your data
+## Install relevant packages and load your data
 
-For this chapter we will need the following R packages: - `tidyverse` - `stringr` - `dplyr`
+For this chapter we will need the following R packages: 
+- `tidyverse`
+- `stringr`
+- `dplyr`
 
 > *Note:* Only install these if you have not already, otherwise go straight to `library()`
 
@@ -91,7 +94,7 @@ cleaning <- cleaning %>%
 
 ```
 
-### 3. Standardise sex, smoking status, and education variables
+### 3. Standardise categorical variables
 
 Categorical variables often contain many variations of the same label (e.g., “female”, “FEMALE”, or “F”). Here, we make them consistent using `case_when()`. The same logic applies to similar variables such as smoking status and education. Standardising is a very important step that ensures data is grouped correctly.
 
@@ -176,7 +179,7 @@ cleaning <- cleaning %>%
 
 ### 6. Convert FEV1 and FVC to litres and calculate ratio
 
-FEV1 and FVC are recorded in millilitres in the raw data, so we convert them to litres for analysis. The FEV1/FVC ratio is a key lung function indicator and values below normal suggest obstruction. Dring collection of this data some errors may have occured, so it is important we remove any outliers at this stage that could bias our analyses later on.
+FEV1 and FVC are recorded in millilitres in the raw data, so we convert them to litres for analysis. The FEV1/FVC ratio is a key lung function indicator and values below normal suggest obstruction. During collection of this data some errors may have occurred, so it is important we remove any outliers at this stage that could bias our analyses later on.
 
 ```{r}
 
@@ -201,7 +204,7 @@ This step applies the *NHANES 2014* Hansen reference equations to estimate the L
 
 -   Females use 80.2 − 0.214 × age
 
-We then compare their observed FEV1/FVC ratio (converted to a percentage) against this LLN. The new variable Below_LLN is coded as following:
+We then compare their observed FEV1/FVC ratio (converted to a percentage) against this LLN. The new variable `Below_LLN` is coded as following:
 
 -   1= airway obstruction
 
@@ -229,7 +232,7 @@ cleaning <- cleaning %>%
 
 ### ✨ Clean Data: Ready for Analysis
 
-Once cleaned, the dataset becomes **`mixed_clean.txt`**, with harmonised categories, derived lung function metrics, and an approximate lower limit of normal (LLN) for FEV1/FVC.\
+Once cleaned, the dataset becomes **`mixed_clean.txt`**, with harmonised categories, derived lung function metrics, and an approximate lower limit of normal (LLN) for FEV1/FVC.
 This version can be used for teaching model fitting, random effects, and basic interpretation of respiratory epidemiology results.
 
 ```{r}
