@@ -47,7 +47,7 @@ For this chapter we will need the following R packages: - `tidyverse` - `stringr
 #| warning: false
 #| error: false
 
-pkgs <- c("tidyverse", "stringr", "readr", "dplyr", "DT")
+pkgs <- c("tidyverse", "stringr", "readr", "dplyr", "knitr")
 
 install_if_missing <- pkgs[!pkgs %in% installed.packages()]
 if (length(install_if_missing) > 0) {
