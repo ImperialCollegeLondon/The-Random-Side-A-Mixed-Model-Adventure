@@ -4,9 +4,9 @@ format: html
 editor: visual
 ---
 
-## Mixed Models Analysis
+### Mixed Models Analysis
 
-For this chapter we will need the following R packages: ``` dplyr``gt ``` `lme4` `broom` `broom.mixed`
+For this chapter we will need the following R packages: `dplyr` `gt` `lme4` `broom` `broom.mixed`
 
 > *Note:* Only install these if you have not already, otherwise go straight to `library()`
 
@@ -14,17 +14,17 @@ For this chapter we will need the following R packages: ``` dplyr``gt ``` `lme4`
 #| include: false
 #| message: false
 #| warning: false
-#| error: false
 
+# Load core packages only
 pkgs <- c("dplyr", "lme4", "broom", "broom.mixed", "gt")
 
-install_if_missing <- pkgs[!pkgs %in% installed.packages()]
-if (length(install_if_missing) > 0) {
-  install.packages(install_if_missing, dependencies = TRUE)
+for (pkg in pkgs) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg, dependencies = c("Depends", "Imports", "LinkingTo"))
+  }
+  library(pkg, character.only = TRUE)
 }
-
-# Load all your packages
-lapply(pkgs, library, character.only = TRUE)
+ 
 ```
 
 ### What exactly do we mean by “mixed effects” in this context?
@@ -41,15 +41,13 @@ A **mixed effects model** includes two types of predictors:
 2.  **Random effects** –\
     These account for **structured dependence** in the data where observations are *not* fully independent. They typically correspond to a grouping factor such as:
 
-```         
 -   Repeated measures per person
 
 -   Students within school
 
 -   Patients within hospitals, or in our case
 
--   **Participants nested inside study sites (countries)**
-```
+-   \*\*Participants nested inside study sites (countries)\*
 
 Random effects let us acknowledge that people measured in the same site share something that cannot be explained by our covariates.
 
@@ -153,7 +151,7 @@ tidy(mod_fixed) %>%
 
 ```
 
-> Note: The coefficients represente the average change in FEV1/FVC associated with each variable in our model.
+> Note: The coefficients represent the average change in FEV1/FVC associated with each variable in our model.
 >
 > -   This assumes that everyone is independent, even if two individuals are from the same site (country) or share unmeasured similarities
 >
@@ -172,7 +170,6 @@ FEV1_FVC ~ exposure_cat_clean + smoking_status_clean + age + sex_clean + BMI +
 (1 | site), data = clean)
 
 #summary(mod_mixed)
-
 
 tidy(mod_mixed, effects = "fixed") %>%
   mutate(
