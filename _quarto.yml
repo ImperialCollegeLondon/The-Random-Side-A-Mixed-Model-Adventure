@@ -9,6 +9,8 @@ website:
         text: Home
       - href: intro_mixed.qmd
         text: Introduction
+      - href: curation.qmd
+        text: Curation
     right:
       - icon: github
         href: https://github.com/ImperialCollegeLondon/ReCoDE-exemplar-template-R   # include your GitHub repo URL
@@ -21,6 +23,4 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-
+    

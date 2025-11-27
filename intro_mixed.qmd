@@ -24,7 +24,7 @@ The tutorial is structured into a series of sections introducing you to the basi
 ### Project Structure
 
 | Stage | Focus | R packages |
-|-------------------|-------------------|------------------------------------|
+|----|----|----|
 | **1. Data Curation** | Importing, cleaning, and structuring grouped data | `tidyverse` |
 | **2. Exploratory Analysis** | Exploring distributions and grouping effects | `ggplot2`, `dplyr` |
 | **3. Model Fitting** | Building linear mixed-effects models | `lme4`, `lmerTest` |
@@ -64,7 +64,7 @@ The following lecture aims to give you an overview of what mixed models are. It 
 
 #### Other resources
 
-- [Mixed models in epidemiology](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891266/)
-- [Mixed models in psychology](https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061)
-- [Mixed models in ecology](https://pmc.ncbi.nlm.nih.gov/articles/PMC5970551/)
-- [Mixed models in finance](https://pmc.ncbi.nlm.nih.gov/articles/PMC8230924/)
+-   [Mixed models in epidemiology](https://pmc.ncbi.nlm.nih.gov/articles/PMC9891266/)
+-   [Mixed models in psychology](https://www.sciencedirect.com/science/article/abs/pii/S0749596X20300061)
+-   [Mixed models in ecology](https://pmc.ncbi.nlm.nih.gov/articles/PMC5970551/)
+-   [Mixed models in finance](https://pmc.ncbi.nlm.nih.gov/articles/PMC8230924/)
