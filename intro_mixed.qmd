@@ -11,9 +11,9 @@ format:
 editor: visual
 ---
 
-# 1. Introduction
+# Introduction
 
-## Welcome to *The Random Side of R: A Mixed Model Adventure* (ReCoDe Project)
+## Welcome to *The Random Side of R: A Mixed Model Adventure* ReCoDe Project
 
 This project is designed to guide you through the process of performing a **mixed-effects model** using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both **fixed effects** (systematic, population-level factors) and **random effects** (group- or subject-level variability).
 
@@ -23,15 +23,23 @@ The tutorial is structured into a series of sections introducing you to the basi
 
 ### Project Structure
 
-| Stage | Focus | R packages |
-|----|----|----|
-| **1. Data Curation** | Importing, cleaning, and structuring grouped data | `tidyverse` |
-| **2. Exploratory Analysis** | Exploring distributions and grouping effects | `ggplot2`, `dplyr` |
-| **3. Model Fitting** | Building linear mixed-effects models | `lme4`, `lmerTest` |
-| **4. Diagnostics** | Checking assumptions and model stability | `performance` |
-| **5. Visualisation** | Plotting fixed/random effects | `sjPlot`, `ggeffects` |
-| **6. Interpretation** | Presenting your findings | `ggplot` , `forest plots` |
-| **7.Extensions** | Generalised or hierarchical structures | `glmmTMB`, `brms` |
++----------------------------------------+---------------------------------------------------+-------------------------------+
+| Stage                                  | Focus                                             | R packages                    |
++========================================+===================================================+===============================+
+| [**1. Curation**](curation.qmd)        | Importing, cleaning, and structuring grouped data | `tidyverse`                   |
++----------------------------------------+---------------------------------------------------+-------------------------------+
+| [**2. Analysis**](analysis_1.qmd)      | Exploring distributions and grouping effects      | `ggplot2`, `dplyr`            |
+|                                        |                                                   |                               |
+|                                        | Running classic vs mixed models                   | `lme4`, `lmerTest`            |
+|                                        |                                                   |                               |
+|                                        | Checking assumptions and model stability          | `performance`                 |
++----------------------------------------+---------------------------------------------------+-------------------------------+
+| [**3. Results**](results.qmd)          | Plotting results from mixed models                | `sjPlot`, `ggeffects`         |
+|                                        |                                                   |                               |
+|                                        | Presenting your findings (tables, forest plots)   | `ggplot2`, `gt`, `forestplot` |
++----------------------------------------+---------------------------------------------------+-------------------------------+
+| [**4. Extension task**](extension.qmd) | Generalised or multilevel structures              | `glmmTMB`, `brms`             |
++----------------------------------------+---------------------------------------------------+-------------------------------+
 
 ## Pre-requisites
 
@@ -54,13 +62,47 @@ At the end of this project you should be able to:
 -   Visualize and validate model
 -   Extend to generalized mixed models (GLMMs) and crossed/nested designs
 
-# Introductory and teaching materials
+# What are Mixed Models?
+
+------------------------------------------------------------------------
 
 The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective.
 
 ## Introductory lecture on mixed models
 
 {{< video https://www.youtube.com/watch?v=-4K-kKXNths >}}
+
+<sup>Video credits: Methods in Experimental Ecology (YouTube channel).</sup>
+
+Before we move on to organising our data and modelling, it’s worth pausing to clarify what we mean by *mixed* effects and why they matter for this type of dataset.
+
+A **mixed effects model** includes two types of predictors:
+
+-   **Fixed effects**:\
+    These are the standard variables you see in a typical regression model: age, sex, BMI, smoking status, exposure category, etc. They are called *fixed* because the effect we estimate is assumed to be the same across all individuals and all sites. These are usually the variables we actually care about drawing conclusions from.
+
+-   **Random effects** –\
+    These account for **structured dependence** in the data where observations are *not* fully independent. They typically correspond to a grouping factor such as:
+
+    -   Repeated measures per person
+
+    -   Students within school
+
+    -   Patients within hospitals, or in our case
+
+    -   Participants nested inside study sites (countries)
+
+Random effects let us acknowledge that people measured in the same site share something that cannot be explained by our covariates.
+
+## Why do we include site as a random effect?
+
+In this example, each participant belongs to one of several study sites (e.g., UK, Colombia, South Africa). Even though everyone is measured with the same lung function test, each site can differ in ways that influence lung function, (e.g., differences in equipment calibration, technician training, recruitment patterns, environmental pollution, healthcare access...)
+
+None of these are measured in our dataset, yet all of them can systematically impact the mean FEV1/FVC ratio at a site. This means that **participants from the same site are more similar to each other** than to participants from a different site (no independent observations).
+
+If we ignore this clustering and use ordinary regression, those unmeasured site-level factors can impact our estimates of the fixed effects such as smoking or exposure category.
+
+A **random intercept for site** absorbs those differences by allowing each site to have its own baseline level of lung function.
 
 #### Other resources
 
