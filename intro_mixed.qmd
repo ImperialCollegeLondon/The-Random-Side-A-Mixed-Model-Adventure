@@ -102,7 +102,7 @@ None of these are measured in our dataset, yet all of them can systematically im
 
 If we ignore this clustering and use ordinary regression, those unmeasured site-level factors can impact our estimates of the fixed effects such as smoking or exposure category.
 
-A **random intercept for site** absorbs those differences by allowing each site to have its own baseline level of lung function.
+A **random intercept for site** takes in those differences by allowing each site to have its own baseline level of lung function.
 
 #### Other resources
 
