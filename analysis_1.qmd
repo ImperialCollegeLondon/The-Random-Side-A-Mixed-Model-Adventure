@@ -207,7 +207,7 @@ performance::model_performance(mod_mixed)
 
 > The mixed model demonstrated strong performance, with fixed effects explaining:
 - nearly half of the variance (marginal R² = 0.448)
-- site-level clustering accounting for additional proportion of variability (conditional R² = 0.791; ICC = 0.621)
+- Site-level clustering accounting for additional proportion of variability (conditional R² = 0.791; ICC = 0.621).
 - A high interclass correlation (ICC) indicates more similarities within sites and a stronger justification for using mixed models
 
 All these indicate that site differences are a major driver of lung function patterns
