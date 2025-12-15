@@ -111,6 +111,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./curation.html"> 
 <span class="menu-text">Curation</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./analysis_1.html"> 
+<span class="menu-text">Analysis</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -134,18 +138,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" id="toc-welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" class="nav-link" data-scroll-target="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> (ReCoDe Project)</a>
+  <li><a href="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" id="toc-welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" class="nav-link" data-scroll-target="#welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> ReCoDe Project</a>
   <ul class="collapse">
   <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
   </ul></li>
   <li><a href="#pre-requisites" id="toc-pre-requisites" class="nav-link" data-scroll-target="#pre-requisites">Pre-requisites</a></li>
   </ul></li>
   <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes">Learning outcomes</a></li>
-  <li><a href="#introductory-and-teaching-materials" id="toc-introductory-and-teaching-materials" class="nav-link" data-scroll-target="#introductory-and-teaching-materials">Introductory and teaching materials</a>
+  <li><a href="#what-are-mixed-models" id="toc-what-are-mixed-models" class="nav-link" data-scroll-target="#what-are-mixed-models">What are Mixed Models?</a>
   <ul class="collapse">
   <li><a href="#introductory-lecture-on-mixed-models" id="toc-introductory-lecture-on-mixed-models" class="nav-link" data-scroll-target="#introductory-lecture-on-mixed-models">Introductory lecture on mixed models</a></li>
+  <li><a href="#why-do-we-include-site-as-a-random-effect" id="toc-why-do-we-include-site-as-a-random-effect" class="nav-link" data-scroll-target="#why-do-we-include-site-as-a-random-effect">Why do we include site as a random effect?</a></li>
   </ul></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10171296/"><i class="bi bi-link-45deg"></i>What are mixed-effect models?</a></li><li><a href="https://journals.sagepub.com/doi/10.1177/2515245920960351"><i class="bi bi-link-45deg"></i>Introduction to mixed models in R</a></li></ul></div></nav>
@@ -179,20 +184,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="introduction" class="level1">
-<h1>1. Introduction</h1>
+<h1>Introduction</h1>
 <section id="welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> (ReCoDe Project)</h2>
+<h2 class="anchored" data-anchor-id="welcome-to-the-random-side-of-r-a-mixed-model-adventure-recode-project">Welcome to <em>The Random Side of R: A Mixed Model Adventure</em> ReCoDe Project</h2>
 <p>This project is designed to guide you through the process of performing a <strong>mixed-effects model</strong> using large data sets in R. Mixed models—also known as hierarchical, multilevel, or random-effects models—are statistical approaches that allow us to account for both <strong>fixed effects</strong> (systematic, population-level factors) and <strong>random effects</strong> (group- or subject-level variability).</p>
 <p>These models are particularly powerful when dealing with <strong>grouped</strong>, <strong>clustered</strong>, or <strong>repeated-measures</strong> data, such as individuals measured multiple times, schools within regions, or experiments conducted across sites. By explicitly modelling the correlation structure within the data, mixed models yield more accurate estimates and generalisable inferences.</p>
 <p>The tutorial is structured into a series of sections introducing you to the basic concepts, analytic approaches, and applications of mixed models in R. You will learn how to structure your data, fit models, interpret both fixed and random effects, and visualise and validate results.</p>
 <section id="project-structure" class="level3">
 <h3 class="anchored" data-anchor-id="project-structure">Project Structure</h3>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Stage</th>
@@ -202,38 +202,29 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>1. Data Curation</strong></td>
+<td><a href="./curation.html"><strong>1. Curation</strong></a></td>
 <td>Importing, cleaning, and structuring grouped data</td>
 <td><code>tidyverse</code></td>
 </tr>
 <tr class="even">
-<td><strong>2. Exploratory Analysis</strong></td>
-<td>Exploring distributions and grouping effects</td>
-<td><code>ggplot2</code>, <code>dplyr</code></td>
+<td><a href="./analysis_1.html"><strong>2. Analysis</strong></a></td>
+<td><p>Exploring distributions and grouping effects</p>
+<p>Running classic vs mixed models</p>
+<p>Checking assumptions and model stability</p></td>
+<td><p><code>ggplot2</code>, <code>dplyr</code></p>
+<p><code>lme4</code>, <code>lmerTest</code></p>
+<p><code>performance</code></p></td>
 </tr>
 <tr class="odd">
-<td><strong>3. Model Fitting</strong></td>
-<td>Building linear mixed-effects models</td>
-<td><code>lme4</code>, <code>lmerTest</code></td>
+<td><a href="results.qmd"><strong>3. Results</strong></a></td>
+<td><p>Plotting results from mixed models</p>
+<p>Presenting your findings (tables, forest plots)</p></td>
+<td><p><code>sjPlot</code>, <code>ggeffects</code></p>
+<p><code>ggplot2</code>, <code>gt</code>, <code>forestplot</code></p></td>
 </tr>
 <tr class="even">
-<td><strong>4. Diagnostics</strong></td>
-<td>Checking assumptions and model stability</td>
-<td><code>performance</code></td>
-</tr>
-<tr class="odd">
-<td><strong>5. Visualisation</strong></td>
-<td>Plotting fixed/random effects</td>
-<td><code>sjPlot</code>, <code>ggeffects</code></td>
-</tr>
-<tr class="even">
-<td><strong>6. Interpretation</strong></td>
-<td>Presenting your findings</td>
-<td><code>ggplot</code> , <code>forest plots</code></td>
-</tr>
-<tr class="odd">
-<td><strong>7.Extensions</strong></td>
-<td>Generalised or hierarchical structures</td>
+<td><a href="extension.qmd"><strong>4. Extension task</strong></a></td>
+<td>Generalised or multilevel structures</td>
 <td><code>glmmTMB</code>, <code>brms</code></td>
 </tr>
 </tbody>
@@ -263,12 +254,36 @@ ul.task-list li input[type="checkbox"] {
 <li>Extend to generalized mixed models (GLMMs) and crossed/nested designs</li>
 </ul>
 </section>
-<section id="introductory-and-teaching-materials" class="level1">
-<h1>Introductory and teaching materials</h1>
+<section id="what-are-mixed-models" class="level1">
+<h1>What are Mixed Models?</h1>
+<hr>
 <p>The following lecture aims to give you an overview of what mixed models are. It comprehensively explains the differences between fixed vs random effect models as well as the differences between random intercepts and slopes. It gives great examples to put the terminology into perspective.</p>
 <section id="introductory-lecture-on-mixed-models" class="level2">
 <h2 class="anchored" data-anchor-id="introductory-lecture-on-mixed-models">Introductory lecture on mixed models</h2>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/-4K-kKXNths" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p><sup>Video credits: Methods in Experimental Ecology (YouTube channel).</sup></p>
+<p>Before we move on to organising our data and modelling, it’s worth pausing to clarify what we mean by <em>mixed</em> effects and why they matter for this type of dataset.</p>
+<p>A <strong>mixed effects model</strong> includes two types of predictors:</p>
+<ul>
+<li><p><strong>Fixed effects</strong>:<br>
+These are the standard variables you see in a typical regression model: age, sex, BMI, smoking status, exposure category, etc. They are called <em>fixed</em> because the effect we estimate is assumed to be the same across all individuals and all sites. These are usually the variables we actually care about drawing conclusions from.</p></li>
+<li><p><strong>Random effects</strong> –<br>
+These account for <strong>structured dependence</strong> in the data where observations are <em>not</em> fully independent. They typically correspond to a grouping factor such as:</p>
+<ul>
+<li><p>Repeated measures per person</p></li>
+<li><p>Students within school</p></li>
+<li><p>Patients within hospitals, or in our case</p></li>
+<li><p>Participants nested inside study sites (countries)</p></li>
+</ul></li>
+</ul>
+<p>Random effects let us acknowledge that people measured in the same site share something that cannot be explained by our covariates.</p>
+</section>
+<section id="why-do-we-include-site-as-a-random-effect" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-we-include-site-as-a-random-effect">Why do we include site as a random effect?</h2>
+<p>In this example, each participant belongs to one of several study sites (e.g., UK, Colombia, South Africa). Even though everyone is measured with the same lung function test, each site can differ in ways that influence lung function, (e.g., differences in equipment calibration, technician training, recruitment patterns, environmental pollution, healthcare access…)</p>
+<p>None of these are measured in our dataset, yet all of them can systematically impact the mean FEV1/FVC ratio at a site. This means that <strong>participants from the same site are more similar to each other</strong> than to participants from a different site (no independent observations).</p>
+<p>If we ignore this clustering and use ordinary regression, those unmeasured site-level factors can impact our estimates of the fixed effects such as smoking or exposure category.</p>
+<p>A <strong>random intercept for site</strong> takes in those differences by allowing each site to have its own baseline level of lung function.</p>
 <section id="other-resources" class="level4">
 <h4 class="anchored" data-anchor-id="other-resources">Other resources</h4>
 <ul>
