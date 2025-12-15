@@ -47,7 +47,7 @@ In this first part, we will use a **standard linear regression** to estimate ass
 
 Fixed effects are the variables we explicitly include in the model because we believe they **directly influence the outcome**. In this dataset, these include:
 
--   exposure category (high vs low)
+- exposure category (high vs low)
 
 - smoking status
 
