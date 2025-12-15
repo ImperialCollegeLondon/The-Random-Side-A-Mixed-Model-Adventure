@@ -192,7 +192,7 @@ tidy(mod_mixed, effects = "fixed") %>%
 
 The term (1 \| site) in our code adds a random intercept for each study site. It allows every site to have its own baseline FEV₁/FVC, while assuming those intercepts are normally distributed around the overall mean.
 
--   This captures unmeasured, site-specific influences for example, differences in equipment, technician calibration, population characteristics, or local environments
+- This captures unmeasured, site-specific influences for example, differences in equipment, technician calibration, population characteristics, or local environments.
 
 -   Including (1 \| site) controls for clustering among participants from the same site without fitting a separate fixed effect for every country. It ensures that the estimated effects of variables like age, smoking, and occupational exposure are not biased by unaccounted site-level variability.
 
