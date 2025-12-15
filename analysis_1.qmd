@@ -1,0 +1,224 @@
+---
+title: ""
+format: html
+editor: visual
+---
+
+### Mixed Models Analysis
+
+For this chapter we will need the following R packages: `dplyr` `gt` `lme4` `broom` `broom.mixed` `ggplot2` `performance`
+
+> *Note:* Only install these if you have not already, otherwise go straight to `library()`
+
+```{r setup-packages}
+#| include: false
+#| message: false
+#| warning: false
+
+# Load core packages only
+pkgs <- c("dplyr", "lme4", "broom", "broom.mixed", "gt", "ggplot2", "performance")
+
+for (pkg in pkgs) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg, dependencies = c("Depends", "Imports", "LinkingTo"))
+  }
+  library(pkg, character.only = TRUE)
+}
+ 
+```
+
+### Classic regression vs Mixed models: Let's break it down!
+
+| Participant | Description |
+|-------------------|-----------------------------------------------------|
+| Person A | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in **Vietnam** |
+| Person B | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in the **UK** |
+| Key idea | By their fixed-effect variables (age, sex, BMI, smoking, exposure), these two people look identical, but their lung function may still differ because their **sites** differ, not because they do |
+| Classic regression | Treats Person A and Person B as interchangeable, ignoring site |
+| Mixed model | There may be a site-level shift in outcomes that I cannot directly observe. Let me adjust for it so I can interpret the fixed effects cleanly |
+
+# Fixed Effects vs Mixed Effects in action
+
+## 1. Fixed Effects
+
+Before exploring mixed-effects models, it is important to build a solid foundation of what **fixed effects** are. These models assume all individuals are independent from each other, and that any differences in lung function can be explained exclusively by the included predictors.
+
+In this first part, we will use a **standard linear regression** to estimate associations between predictors (age, sex, smoking, exposure category, BMI) and the **continuous outcome** FEV1/FVC.
+
+Fixed effects are the variables we explicitly include in the model because we believe they **directly influence the outcome**. In this dataset, these include:
+
+- exposure category (high vs low)
+
+- smoking status
+
+- age
+
+-   sex
+
+-   BMI
+
+These effects are called *fixed* because each coefficient represents one **single average effect** applied to everyone in the dataset.
+
+```{r, message=FALSE, warning=FALSE}
+clean <- read.table("data/mixed_clean.txt", header=T, sep="\t")
+
+#Specific the reference levels for your variables 
+clean$smoking_status_clean <- factor(
+  clean$smoking_status_clean,
+  levels = c("Never", "Former", "Current", "Occasional")
+)
+
+clean$exposure_cat_clean <- factor(
+  clean$exposure_cat_clean,
+  levels = c("low_exposure", "high_exposure")
+)
+
+#Run the model 
+mod_fixed <- lm(
+FEV1_FVC ~ exposure_cat_clean + smoking_status_clean + age + sex_clean + BMI,
+data = clean)
+
+#summary(mod_fixed) Use this to visualise the model output
+
+tidy(mod_fixed) %>%
+    # Rename model terms for clarity
+    mutate(term = recode(term,
+                         "(Intercept)" = "Intercept",
+                         "exposure_cat_cleanhigh_exposure" = "High exposure (vs low)",
+                         "smoking_status_cleanFormer" = "Former smoker (vs never)",
+                         "smoking_status_cleanCurrent" = "Current smoker (vs never)",
+                         "age" = "Age (years)",
+                         "sex_cleanMale" = "Male (vs female)",
+                         "BMI" = "Body Mass Index"
+    )) %>%
+    # Round numbers and replace tiny p-values with "<0.001"
+    mutate(
+        across(c(estimate, std.error, statistic), round, 4),
+        p.value = ifelse(p.value < 0.001, "<0.001",
+                         formatC(p.value, format = "f", digits = 3))
+    ) %>%
+    gt() %>%
+    tab_header(title = "Fixed-Effects Regression Results") %>%
+    cols_label(
+        term = "Variable",
+        estimate = "Estimate",
+        std.error = "Std. Error",
+        statistic = "t value",
+        p.value = "p-value"
+    )
+
+```
+
+> Note: The coefficients represent the average change in FEV1/FVC associated with each variable in our model.
+>
+> -   This assumes that everyone is independent, even if two individuals are from the same site (country) or share unmeasured similarities
+>
+> -   Std.errors may be too small id there is clustering (e.g., by site/country)
+>
+> -   Results may be biased
+
+## 2. Mixed-Effects Model
+
+Before fitting mixed-effects models, it is useful to examine whether lung function varies across sites, as this helps confirm the presence of clustering.
+
+```{r, message=FALSE, warning=FALSE}
+
+# Reorder sites by median FEV1/FVC
+clean <- clean %>%
+  mutate(site = reorder(site, FEV1_FVC, median))
+
+# Compute overall median for reference line
+overall_med <- median(clean$FEV1_FVC, na.rm = TRUE)
+
+# Plot
+ggplot(clean, aes(x = site, y = FEV1_FVC)) +
+  geom_boxplot(fill = "grey95", outlier.shape = NA) +
+  geom_jitter(aes(colour = site), width = 0.12, alpha = 0.35, size = 1) +
+  geom_hline(yintercept = overall_med, linetype = "dashed") +
+  labs(
+    title = "Variation in FEV1/FVC Across Study Sites",
+    x     = "Study Site",
+    y     = "FEV1/FVC"
+  ) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title  = element_text(face = "bold"),
+    legend.position = "none"
+  )
+
+```
+
+> Note: The clear differences in median FEV1/FVC across sites indicate clustering, supporting the use of a mixed-effects model with site as a random intercept.
+
+The `lme4` package is one of the most widely used in R to run this analysis. In this example we will fit a mixed effect model with random intercept by site
+
+```{r, message=FALSE, warning=FALSE}
+
+mod_mixed <- lmer(
+FEV1_FVC ~ exposure_cat_clean + smoking_status_clean + age + sex_clean + BMI +
+(1 | site), data = clean)
+
+#summary(mod_mixed)
+
+tidy(mod_mixed, effects = "fixed") %>%
+  mutate(
+    term = recode(term,
+      "(Intercept)" = "Intercept",
+      "exposure_cat_cleanhigh_exposure" = "High exposure (vs low)",
+      "smoking_status_cleanFormer"     = "Former smoker (vs never)",
+      "smoking_status_cleanCurrent"    = "Current smoker (vs never)",
+      "age"                            = "Age (years)",
+      "sex_cleanMale"                  = "Male (vs female)",
+      "BMI"                            = "Body Mass Index"
+    ),
+    # Wald 95% CI
+    ci_low  = estimate - 1.96 * std.error,
+    ci_high = estimate + 1.96 * std.error
+  ) %>%
+  transmute(
+    Variable = term,
+    Estimate = round(estimate, 2),
+    `95% CI (low)`  = round(ci_low, 2),
+    `95% CI (high)` = round(ci_high, 2),
+    `Std. Error`    = round(std.error, 2)
+  ) %>%
+  gt() %>%
+  tab_header(title = "Mixed-Effects Model for FEV1/FVC (Random Intercept: Site)")
+
+```
+
+### 🧩 What does (1 \| site) mean?
+
+The term (1 \| site) in our code adds a random intercept for each study site. It allows every site to have its own baseline FEV₁/FVC, while assuming those intercepts are normally distributed around the overall mean.
+
+- This captures unmeasured, site-specific influences for example, differences in equipment, technician calibration, population characteristics, or local environments.
+
+- Including (1 \| site) controls for clustering among participants from the same site without fitting a separate fixed effect for every country. It ensures that the estimated effects of variables like age, smoking, and occupational exposure are not biased by unaccounted site-level variability.
+
+# Further checks to confirm using mixed models
+
+## How well does the mixed model fit the data?
+```{r}
+
+performance::model_performance(mod_mixed)
+
+```
+
+> The mixed model demonstrated strong performance, with fixed effects explaining:
+- Nearly half of the variance (marginal R² = 0.448).
+- Site-level clustering accounting for additional proportion of variability (conditional R² = 0.791; ICC = 0.621).
+- A high interclass correlation (ICC) indicates more similarities within sites and a stronger justification for using mixed models.
+
+All these indicate that site differences are a major driver of lung function patterns.
+
+## Stability of the random effects
+
+```{r}
+lme4::isSingular(mod_mixed, tol = 1e-4)
+```
+If the model returns `TRUE`, it suggests that adding site as a random intercept may not be necessary. The model behaves as if site doesn’t meaningfully affect the outcome.
+
+#### More resources
+
+[lme4 CRAN package vignettes](https://cran.r-project.org/web/packages/lme4/vignettes/lmer.pdf)
