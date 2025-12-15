@@ -213,6 +213,7 @@ performance::model_performance(mod_mixed)
 All these indicate that site differences are a major driver of lung function patterns
 
 ## Stability of the random effects
+
 ```{r}
 lme4::isSingular(mod_mixed, tol = 1e-4)
 ```
