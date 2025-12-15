@@ -51,7 +51,7 @@ Fixed effects are the variables we explicitly include in the model because we be
 
 - smoking status
 
--   age
+- age
 
 -   sex
 
