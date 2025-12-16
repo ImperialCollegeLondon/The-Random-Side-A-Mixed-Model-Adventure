@@ -1,0 +1,309 @@
+---
+title: "Extension Activity: Mixed Models with Student Data"
+format: html
+editor: visual
+---
+
+# Overview
+
+In this activity, you will analyse a synthetic dataset of students nested within classrooms. Your tasks:
+
+1\. Load the dataset\
+2. Explore and clean variables\
+3. Fit fixed and mixed models\
+4. Visualise effects\
+5. Produce a results table
+
+Each task includes **hints** and **hidden solutions**.
+
+------------------------------------------------------------------------
+
+# Dataset description
+
+The dataset contains: - **class**: classroom identifier (random intercept)\
+- **student_id**: unique ID\
+- **hours_study**: average weekly study hours\
+- **SES**: socioeconomic status (Low/Medium/High)\
+- **gender**: Male/Female\
+- **score**: exam score (outcome)
+
+A classroom-level effect influences baseline scores, making the data suitable for mixed modelling.
+
+------------------------------------------------------------------------
+
+# 1. Load the packages
+
+```{r}
+# HINT: dplyr, ggplot2, lme4, broom.mixed, gt
+
+
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+library(dplyr)
+library(ggplot2)
+library(lme4)
+library(broom.mixed)
+library(gt)
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 2. Import the dataset
+
+Download the dataset here:
+
+👉 <a href="data/practical.csv" download>Download practical.csv</a>
+
+```{r}
+# HINT:
+# You can use read.csv()
+# Remember to specify the folder in which the dataset is saved e.g., "data"
+# Give a name to your data e.g., df
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+df <- read.csv("data/practical.csv")
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 3. Explore the data
+
+```{r}
+# HINTS:
+# Have a look at the first few rows across all columns 
+# Also try to use summary() and table() functions
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+head(df)
+summary(df)
+table(df$class)
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 4. Clean and prepare variables
+
+```{r}
+# HINT:
+# Convert SES and gender to factors
+# Ensure class is a factor
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+df$SES <- factor(df$SES, levels=c("Low","Medium","High"))
+df$gender <- factor(df$gender)
+df$class <- factor(df$class)
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 5. Fit a Fixed-Effects Model
+
+Outcome: **score**
+
+```{r}
+# HINT:
+# mod_fixed <- lm(OUTCOME ~ EXPOSURE + COVARIATES, data=df)
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+mod_fixed <- lm(score ~ hours_study + SES + gender, data=df)
+summary(mod_fixed)
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 6. Fit a Mixed-Effects Model
+
+# (Random Intercept: Class)
+
+```{r}
+# HINT:
+# mod_mixed <- lmer(OUTCOME ~ EXPOSURE + COVARIATES, + (1 | RANDOM INTERCEPT), data=df)
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+mod_mixed <- lmer(score ~ hours_study + SES + gender + (1 | class), data=df)
+summary(mod_mixed)
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 7. Visualise fixed effects
+
+```{r}
+# HINT: try to use sjPlot R Package
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+sjPlot::plot_model(mod_mixed, type="est")
+
+```
+
+</details>
+
+
+------------------------------------------------------------------------
+
+# 8. Visualise random effects
+
+```{r}
+# HINT: you can use plot_model()
+
+
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+plot_model(mod_mixed, type="re")
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# 9. Create a results table
+
+```{r}
+# HINT: you can use tidy() and gt() functions here
+
+
+
+
+```
+
+<details>
+
+<summary><strong>Show solution</strong></summary>
+
+``` r
+tidy(mod_mixed, effects="fixed") %>% gt()
+```
+
+</details>
+
+------------------------------------------------------------------------
+
+# Reflection
+
+When comparing the fixed-effects and mixed-effects models, consider the questions below:
+
+1.  **Effect Sizes**\
+    Do the estimated effects of study hours, SES, or gender change when adding the classroom random intercept?
+
+2.  **Uncertainty**\
+    Do standard errors increase or decrease? Does this affect which predictors appear important?
+
+3.  **Clustering**\
+    Is there evidence of meaningful variation between classes?
+
+4.  **Interpretation**\
+    Why might the mixed model provide a more realistic representation of student exam scores?
+
+------------------------------------------------------------------------
+
+<details>
+
+<summary><strong>Show example answers</strong></summary>
+
+**1. Effect Sizes**\
+The coefficients for study hours, SES, and gender remain similar in size, but may shift slightly once classroom effects are accounted for. This indicates that most of the predictor effects are robust, though the fixed model may over- or underestimate some associations.
+
+**2. Uncertainty**\
+Standard errors typically increase in the mixed model because it correctly acknowledges that observations within the same class are not independent. As a result, some predictors may become less statistically significant.
+
+**3. Clustering**\
+The random intercept variance shows that classes differ systematically in their baseline exam scores. This justifies the use of a mixed model.
+
+**4. Interpretation**\
+The mixed model is preferable because it adjusts for classroom-level differences that could confound the relationships between student characteristics and exam scores. Ignoring this structure risks producing overly confident or biased estimates.
+
+</details>
