@@ -160,7 +160,7 @@ This is a **highly precise effect** (t ≈ 50).
 
 - **Smoking status**:
 
-    -   Previous smokers have a 0.0239 lower FEV1/FVC compared to never smokers
+    - Previous smokers have a 0.0239 lower FEV1/FVC compared to never smokers.
 
     -   Current smokers have a 0.0284 lower FEV1/FVC ration compared to never smokers
 
