@@ -134,7 +134,7 @@ ggplot(ran, aes(x = estimate, y = site, colour = site)) +
 
 ```
 
-In this plot we can see that the estimated random intercepts from the mixed model, which represent how each site differs from the overall baseline level of FEV1/FVC. - Sites with positive values start higher than the mean, while those with negative values start lower. The confidence intervals show the precision of each estimate.
+In this plot we can see that the estimated random intercepts from the mixed model, which represent how each site differs from the overall baseline level of FEV1/FVC. Sites with positive values start higher than the mean, while those with negative values start lower. The confidence intervals show the precision of each estimate.
 
 Together, these results show that baseline lung function varies substantially across sites, supporting the use of a random-intercept structure in the model.
 
