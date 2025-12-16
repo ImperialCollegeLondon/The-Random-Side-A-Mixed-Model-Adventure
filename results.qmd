@@ -158,7 +158,7 @@ Together, these results show that baseline lung function varies substantially ac
 
 This is a **highly precise effect** (t ≈ 50).
 
--   **Smoking status**
+- **Smoking status**:
 
     -   Previous smokers have a 0.0239 lower FEV1/FVC compared to never smokers
 
