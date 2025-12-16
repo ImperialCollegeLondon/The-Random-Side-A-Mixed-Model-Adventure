@@ -174,7 +174,7 @@ This is a **highly precise effect** (t ≈ 50).
 
 ### **Random effects (site-level variation)**
 
--   Sites differ in their baseline FEV1/FVC by an SD of 0.064, which is larger than the residual SD (0.050)
+- Sites differ in their baseline FEV1/FVC by an SD of 0.064, which is larger than the residual SD (0.050).
 
     -   This means between-site differences are real.
 
