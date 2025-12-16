@@ -176,7 +176,7 @@ This is a **highly precise effect** (t ≈ 50).
 
 - Sites differ in their baseline FEV1/FVC by an SD of 0.064, which is larger than the residual SD (0.050).
 
-    -   This means between-site differences are real.
+    - This means between-site differences are real.
 
 -   The caterpillar plot shows that some sites start well above the overall mean and some below, validating the need for a random intercept by site
 
