@@ -154,7 +154,7 @@ Together, these results show that baseline lung function varies substantially ac
 
 ### **Fixed effects**
 
--   **High vs low exposure** Individuals in the *low exposure* group have, on average, **0.141 higher FEV1/FVC** than those in the *high exposure* group (when accounting for smoking, age, sex, BMI).
+- **High vs low exposure**: Individuals in the *low exposure* group have, on average, **0.141 higher FEV1/FVC** than those in the *high exposure* group (when accounting for smoking, age, sex, BMI).
 
 This is a **highly precise effect** (t ≈ 50).
 
