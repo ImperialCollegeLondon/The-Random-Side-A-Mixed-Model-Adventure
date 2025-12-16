@@ -182,6 +182,6 @@ This is a **highly precise effect** (t ≈ 50).
 
 ### **Model fit & implications**
 
--   The difference between site-level variance and residual variance indicates that a mixed model is appropriate, since ignoring site would incorrectly pool together populations with different baseline lung function.
+- The difference between site-level variance and residual variance indicates that a mixed model is appropriate, since ignoring site would incorrectly pool together populations with different baseline lung function.
 
 - The exposure effect (low vs high) is consistent across sites because your model uses random intercepts only and the plot confirms that the baseline varies, but the exposure slope does not.
