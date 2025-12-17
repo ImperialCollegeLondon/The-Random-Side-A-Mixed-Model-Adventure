@@ -20,7 +20,8 @@ Each task includes **hints** and **hidden solutions**.
 
 # Dataset description
 
-The dataset contains: - **class**: classroom identifier (random intercept)\
+The dataset contains: 
+- **class**: classroom identifier (random intercept)
 - **student_id**: unique ID\
 - **hours_study**: average weekly study hours\
 - **SES**: socioeconomic status (Low/Medium/High)\
