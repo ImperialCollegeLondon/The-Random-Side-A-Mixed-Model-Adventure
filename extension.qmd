@@ -285,7 +285,7 @@ When comparing the fixed-effects and mixed-effects models, consider the question
 3.  **Clustering**\
     Is there evidence of meaningful variation between classes?
 
-4.  **Interpretation**\
+4. **Interpretation**
     Why might the mixed model provide a more realistic representation of student exam scores?
 
 ------------------------------------------------------------------------
