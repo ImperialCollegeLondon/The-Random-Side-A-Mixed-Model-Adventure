@@ -300,7 +300,7 @@ The coefficients for study hours, SES, and gender remain similar in size, but ma
 **2. Uncertainty**\
 Standard errors typically increase in the mixed model because it correctly acknowledges that observations within the same class are not independent. As a result, some predictors may become less statistically significant.
 
-**3. Clustering**\
+**3. Clustering**
 The random intercept variance shows that classes differ systematically in their baseline exam scores. This justifies the use of a mixed model.
 
 **4. Interpretation**
