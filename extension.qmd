@@ -282,7 +282,7 @@ When comparing the fixed-effects and mixed-effects models, consider the question
 2.  **Uncertainty**\
     Do standard errors increase or decrease? Does this affect which predictors appear important?
 
-3.  **Clustering**\
+3. **Clustering**
     Is there evidence of meaningful variation between classes?
 
 4. **Interpretation**
