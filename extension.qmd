@@ -294,7 +294,7 @@ When comparing the fixed-effects and mixed-effects models, consider the question
 
 <summary><strong>Show example answers</strong></summary>
 
-**1. Effect Sizes**\
+**1. Effect Sizes**
 The coefficients for study hours, SES, and gender remain similar in size, but may shift slightly once classroom effects are accounted for. This indicates that most of the predictor effects are robust, though the fixed model may over- or underestimate some associations.
 
 **2. Uncertainty**\
