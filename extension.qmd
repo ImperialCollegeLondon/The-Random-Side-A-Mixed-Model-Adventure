@@ -303,7 +303,7 @@ Standard errors typically increase in the mixed model because it correctly ackno
 **3. Clustering**\
 The random intercept variance shows that classes differ systematically in their baseline exam scores. This justifies the use of a mixed model.
 
-**4. Interpretation**\
+**4. Interpretation**
 The mixed model is preferable because it adjusts for classroom-level differences that could confound the relationships between student characteristics and exam scores. Ignoring this structure risks producing overly confident or biased estimates.
 
 </details>
