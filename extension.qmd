@@ -10,7 +10,7 @@ In this activity, you will analyse a synthetic dataset of students nested within
 
 1. Load the dataset
 2. Explore and clean variables\
-3. Fit fixed and mixed models\
+3. Fit fixed and mixed models
 4. Visualise effects\
 5. Produce a results table
 
