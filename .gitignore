@@ -5,3 +5,4 @@ _site/
 .Rhistory
 analysis_1_files
 results_files
+.DS_Store
