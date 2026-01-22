@@ -8,11 +8,11 @@ editor: visual
 
 In this activity, you will analyse a synthetic dataset of students nested within classrooms. Your tasks:
 
-1. Load the dataset
-2. Explore and clean variables
-3. Fit fixed and mixed models
-4. Visualise effects
-5. Produce a results table
+1.  Load the dataset
+2.  Explore and clean variables
+3.  Fit fixed and mixed models
+4.  Visualise effects
+5.  Produce a results table
 
 Each task includes **hints** and **hidden solutions**.
 
@@ -20,9 +20,7 @@ Each task includes **hints** and **hidden solutions**.
 
 # Dataset description
 
-The dataset contains: 
-- **class**: classroom identifier (random intercept)
-- **student_id**: unique ID\
+The dataset contains: - **class**: classroom identifier (random intercept) - **student_id**: unique ID\
 - **hours_study**: average weekly study hours\
 - **SES**: socioeconomic status (Low/Medium/High)\
 - **gender**: Male/Female\
@@ -219,11 +217,9 @@ summary(mod_mixed)
 
 ``` r
 sjPlot::plot_model(mod_mixed, type="est")
-
 ```
 
 </details>
-
 
 ------------------------------------------------------------------------
 
@@ -283,11 +279,9 @@ When comparing the fixed-effects and mixed-effects models, consider the question
 2.  **Uncertainty**\
     Do standard errors increase or decrease? Does this affect which predictors appear important?
 
-3. **Clustering**
-    Is there evidence of meaningful variation between classes?
+3.  **Clustering** Is there evidence of meaningful variation between classes?
 
-4. **Interpretation**
-    Why might the mixed model provide a more realistic representation of student exam scores?
+4.  **Interpretation** Why might the mixed model provide a more realistic representation of student exam scores?
 
 ------------------------------------------------------------------------
 
@@ -295,16 +289,13 @@ When comparing the fixed-effects and mixed-effects models, consider the question
 
 <summary><strong>Show example answers</strong></summary>
 
-**1. Effect Sizes**
-The coefficients for study hours, SES, and gender remain similar in size, but may shift slightly once classroom effects are accounted for. This indicates that most of the predictor effects are robust, though the fixed model may over- or underestimate some associations.
+**1. Effect Sizes** The coefficients for study hours, SES, and gender remain similar in size, but may shift slightly once classroom effects are accounted for. This indicates that most of the predictor effects are robust, though the fixed model may over- or underestimate some associations.
 
 **2. Uncertainty**\
 Standard errors typically increase in the mixed model because it correctly acknowledges that observations within the same class are not independent. As a result, some predictors may become less statistically significant.
 
-**3. Clustering**
-The random intercept variance shows that classes differ systematically in their baseline exam scores. This justifies the use of a mixed model.
+**3. Clustering** The random intercept variance shows that classes differ systematically in their baseline exam scores. This justifies the use of a mixed model.
 
-**4. Interpretation**
-The mixed model is preferable because it adjusts for classroom-level differences that could confound the relationships between student characteristics and exam scores. Ignoring this structure risks producing overly confident or biased estimates.
+**4. Interpretation** The mixed model is preferable because it adjusts for classroom-level differences that could confound the relationships between student characteristics and exam scores. Ignoring this structure risks producing overly confident or biased estimates.
 
 </details>
