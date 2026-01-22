@@ -1,10 +1,8 @@
 ---
-title: ""
+title: "Mixed Models Analysis"
 format: html
 editor: visual
 ---
-
-### Mixed Models Analysis
 
 For this chapter we will need the following R packages: `dplyr` `gt` `lme4` `broom` `broom.mixed` `ggplot2` `performance`
 
@@ -24,13 +22,12 @@ for (pkg in pkgs) {
   }
   library(pkg, character.only = TRUE)
 }
- 
 ```
 
 ### Classic regression vs Mixed models: Let's break it down!
 
 | Participant | Description |
-|-------------------|-----------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | Person A | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in **Vietnam** |
 | Person B | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in the **UK** |
 | Key idea | By their fixed-effect variables (age, sex, BMI, smoking, exposure), these two people look identical, but their lung function may still differ because their **sites** differ, not because they do |
@@ -47,11 +44,11 @@ In this first part, we will use a **standard linear regression** to estimate ass
 
 Fixed effects are the variables we explicitly include in the model because we believe they **directly influence the outcome**. In this dataset, these include:
 
-- exposure category (high vs low)
+-   exposure category (high vs low)
 
-- smoking status
+-   smoking status
 
-- age
+-   age
 
 -   sex
 
@@ -192,23 +189,21 @@ tidy(mod_mixed, effects = "fixed") %>%
 
 The term (1 \| site) in our code adds a random intercept for each study site. It allows every site to have its own baseline FEV₁/FVC, while assuming those intercepts are normally distributed around the overall mean.
 
-- This captures unmeasured, site-specific influences for example, differences in equipment, technician calibration, population characteristics, or local environments.
+-   This captures unmeasured, site-specific influences for example, differences in equipment, technician calibration, population characteristics, or local environments.
 
-- Including (1 \| site) controls for clustering among participants from the same site without fitting a separate fixed effect for every country. It ensures that the estimated effects of variables like age, smoking, and occupational exposure are not biased by unaccounted site-level variability.
+-   Including (1 \| site) controls for clustering among participants from the same site without fitting a separate fixed effect for every country. It ensures that the estimated effects of variables like age, smoking, and occupational exposure are not biased by unaccounted site-level variability.
 
 # Further checks to confirm using mixed models
 
 ## How well does the mixed model fit the data?
+
 ```{r}
 
 performance::model_performance(mod_mixed)
 
 ```
 
-> The mixed model demonstrated strong performance, with fixed effects explaining:
-- Nearly half of the variance (marginal R² = 0.448).
-- Site-level clustering accounting for additional proportion of variability (conditional R² = 0.791; ICC = 0.621).
-- A high interclass correlation (ICC) indicates more similarities within sites and a stronger justification for using mixed models.
+> The mixed model demonstrated strong performance, with fixed effects explaining: - Nearly half of the variance (marginal R² = 0.448). - Site-level clustering accounting for additional proportion of variability (conditional R² = 0.791; ICC = 0.621). - A high interclass correlation (ICC) indicates more similarities within sites and a stronger justification for using mixed models.
 
 All these indicate that site differences are a major driver of lung function patterns.
 
@@ -217,6 +212,7 @@ All these indicate that site differences are a major driver of lung function pat
 ```{r}
 lme4::isSingular(mod_mixed, tol = 1e-4)
 ```
+
 If the model returns `TRUE`, it suggests that adding site as a random intercept may not be necessary. The model behaves as if site doesn’t meaningfully affect the outcome.
 
 #### More resources

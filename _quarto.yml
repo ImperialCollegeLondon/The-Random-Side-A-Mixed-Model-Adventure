@@ -2,7 +2,6 @@ project:
   type: website
 
 website:
-  title: "ReCoDE: Mixed models R tutorial"
   navbar:
     left:
       - href: index.qmd
@@ -13,9 +12,11 @@ website:
         text: Curation
       - href: analysis_1.qmd
         text: Analysis
+      - href: results.qmd
+        text: Results
     right:
       - icon: github
-        href: https://github.com/ImperialCollegeLondon/ReCoDE-exemplar-template-R   # include your GitHub repo URL
+        href: https://github.com/ImperialCollegeLondon/The-Random-Side-A-Mixed-Model-Adventure/tree/main  # include your GitHub repo URL
         aria-label: GitHub
 
 format:
