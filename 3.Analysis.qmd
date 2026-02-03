@@ -27,7 +27,7 @@ for (pkg in pkgs) {
 ### Classic regression vs Mixed models: Let's break it down!
 
 | Participant | Description |
-|---------------------|---------------------------------------------------|
+|----|----|
 | Person A | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in **Vietnam** |
 | Person B | 45-year-old, non-smoking, male, normal BMI, working in a low-exposure job in the **UK** |
 | Key idea | By their fixed-effect variables (age, sex, BMI, smoking, exposure), these two people look identical, but their lung function may still differ because their **sites** differ, not because they do |
