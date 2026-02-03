@@ -6,15 +6,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: intro_mixed.qmd
+      - href: 1.Introduction.qmd
         text: Introduction
-      - href: curation.qmd
+      - href: 2.Curation.qmd
         text: Curation
-      - href: analysis_1.qmd
+      - href: 3.Analysis.qmd
         text: Analysis
-      - href: results.qmd
+      - href: 4.Results.qmd
         text: Results
-      - href: extension.qmd
+      - href: 5.Extension.qmd
         text: Extension
     right:
       - icon: github
