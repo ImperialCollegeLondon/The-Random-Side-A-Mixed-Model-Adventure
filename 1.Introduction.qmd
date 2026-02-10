@@ -28,7 +28,7 @@ The tutorial is structured into a series of sections introducing you to the basi
 +========================================+===================================================+===============================+
 | [**1. Curation**](2_curation.qmd)        | Importing, cleaning, and structuring grouped data | `tidyverse`                   |
 +----------------------------------------+---------------------------------------------------+-------------------------------+
-| [**2. Analysis**](3.Analysis.qmd)      | Exploring distributions and grouping effects      | `ggplot2`, `dplyr`            |
+| [**2. Analysis**](3_analysis.qmd)      | Exploring distributions and grouping effects      | `ggplot2`, `dplyr`            |
 |                                        |                                                   |                               |
 |                                        | Running classic vs mixed models                   | `lme4`, `lmerTest`            |
 |                                        |                                                   |                               |
