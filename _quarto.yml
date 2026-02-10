@@ -10,7 +10,7 @@ website:
         text: Introduction
       - href: 2_curation.qmd
         text: Curation
-      - href: 3.Analysis.qmd
+      - href: 3_analysis.qmd
         text: Analysis
       - href: 4.Results.qmd
         text: Results
