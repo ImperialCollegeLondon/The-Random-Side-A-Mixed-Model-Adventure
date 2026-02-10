@@ -12,7 +12,7 @@ website:
         text: Curation
       - href: 3_analysis.qmd
         text: Analysis
-      - href: 4.Results.qmd
+      - href: 4_results.qmd
         text: Results
       - href: 5.Extension.qmd
         text: Extension
