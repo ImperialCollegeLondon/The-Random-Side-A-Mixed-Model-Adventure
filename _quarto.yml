@@ -6,7 +6,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: 1.Introduction.qmd
+      - href: 1_introduction.qmd
         text: Introduction
       - href: 2.Curation.qmd
         text: Curation
