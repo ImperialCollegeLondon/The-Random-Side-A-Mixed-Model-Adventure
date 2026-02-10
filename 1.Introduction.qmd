@@ -34,7 +34,7 @@ The tutorial is structured into a series of sections introducing you to the basi
 |                                        |                                                   |                               |
 |                                        | Checking assumptions and model stability          | `performance`                 |
 +----------------------------------------+---------------------------------------------------+-------------------------------+
-| [**3. Results**](4.Results.qmd)          | Plotting results from mixed models                | `sjPlot`, `ggeffects`         |
+| [**3. Results**](4_results.qmd)          | Plotting results from mixed models                | `sjPlot`, `ggeffects`         |
 |                                        |                                                   |                               |
 |                                        | Presenting your findings (tables, forest plots)   | `ggplot2`, `gt`, `forestplot` |
 +----------------------------------------+---------------------------------------------------+-------------------------------+
