@@ -14,7 +14,7 @@ website:
         text: Analysis
       - href: 4_results.qmd
         text: Results
-      - href: 5.Extension.qmd
+      - href: 5_extension.qmd
         text: Extension
     right:
       - icon: github
