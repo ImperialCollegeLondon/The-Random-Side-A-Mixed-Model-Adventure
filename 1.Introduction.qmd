@@ -38,7 +38,7 @@ The tutorial is structured into a series of sections introducing you to the basi
 |                                        |                                                   |                               |
 |                                        | Presenting your findings (tables, forest plots)   | `ggplot2`, `gt`, `forestplot` |
 +----------------------------------------+---------------------------------------------------+-------------------------------+
-| [**4. Extension task**](5.Extension.qmd) | Generalised or multilevel structures              | `glmmTMB`, `brms`             |
+| [**4. Extension task**](5_extension.qmd) | Generalised or multilevel structures              | `glmmTMB`, `brms`             |
 +----------------------------------------+---------------------------------------------------+-------------------------------+
 
 ## Pre-requisites
