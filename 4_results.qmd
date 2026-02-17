@@ -154,15 +154,15 @@ Together, these results show that baseline lung function varies substantially ac
 
 ### **Fixed effects**
 
-- **High vs low exposure**: Individuals in the *low exposure* group have, on average, **0.141 higher FEV1/FVC** than those in the *high exposure* group (when accounting for smoking, age, sex, BMI).
+-   **High vs low exposure**: Individuals in the *low exposure* group have, on average, **0.141 higher FEV1/FVC** than those in the *high exposure* group (when accounting for smoking, age, sex, BMI).
 
 This is a **highly precise effect** (t ≈ 50).
 
-- **Smoking status**:
+-   **Smoking status**:
 
-    - Previous smokers have a 0.0239 lower FEV1/FVC compared to never smokers.
+    -   Previous smokers have a 0.0239 lower FEV1/FVC compared to never smokers.
 
-    - Current smokers have a 0.0284 lower FEV1/FVC ration compared to never smokers.
+    -   Current smokers have a 0.0284 lower FEV1/FVC ration compared to never smokers.
 
 -   **Age:**
 
@@ -174,14 +174,14 @@ This is a **highly precise effect** (t ≈ 50).
 
 ### **Random effects (site-level variation)**
 
-- Sites differ in their baseline FEV1/FVC by an SD of 0.064, which is larger than the residual SD (0.050).
+-   Sites differ in their baseline FEV1/FVC by an SD of 0.064, which is larger than the residual SD (0.050).
 
-    - This means between-site differences are real.
+    -   This means between-site differences are real.
 
-- The caterpillar plot shows that some sites start well above the overall mean and some below, validating the need for a random intercept by site.
+-   The caterpillar plot shows that some sites start well above the overall mean and some below, validating the need for a random intercept by site.
 
 ### **Model fit & implications**
 
-- The difference between site-level variance and residual variance indicates that a mixed model is appropriate, since ignoring site would incorrectly pool together populations with different baseline lung function.
+-   The difference between site-level variance and residual variance indicates that a mixed model is appropriate, since ignoring site would incorrectly pool together populations with different baseline lung function.
 
-- The exposure effect (low vs high) is consistent across sites because your model uses random intercepts only and the plot confirms that the baseline varies, but the exposure slope does not.
+-   The exposure effect (low vs high) is consistent across sites because your model uses random intercepts only and the plot confirms that the baseline varies, but the exposure slope does not.
