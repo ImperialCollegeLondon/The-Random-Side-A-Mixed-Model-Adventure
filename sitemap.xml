@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/intro_mixed.html</loc>
-    <lastmod>2026-01-22T16:12:05.403Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/curation.html</loc>
-    <lastmod>2026-01-22T16:12:05.399Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/index.html</loc>
-    <lastmod>2026-01-22T16:12:05.403Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/analysis_1.html</loc>
-    <lastmod>2026-01-22T16:12:05.399Z</lastmod>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/1_introduction.html</loc>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
   </url>
   <url>
     <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/LICENSE.html</loc>
-    <lastmod>2026-01-22T16:12:05.398Z</lastmod>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
   </url>
   <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/results.html</loc>
-    <lastmod>2026-01-22T16:12:05.405Z</lastmod>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/5_extension.html</loc>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
   </url>
   <url>
-    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/extension.html</loc>
-    <lastmod>2026-01-22T16:12:05.402Z</lastmod>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/index.html</loc>
+    <lastmod>2026-02-17T12:56:30.296Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/4_results.html</loc>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/3_analysis.html</loc>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ImperialCollegeLondon.github.io/The-Random-Side-A-Mixed-Model-Adventure/2_curation.html</loc>
+    <lastmod>2026-02-17T12:56:30.293Z</lastmod>
   </url>
 </urlset>
